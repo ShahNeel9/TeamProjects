@@ -7,7 +7,7 @@ package lab7.entities;
 
 /**
  *
- * @author harshalneelkamal
+ * @author 
  */
 public class Comment {
     private int id;
