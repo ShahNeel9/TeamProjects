@@ -60,7 +60,6 @@ public class AnalysisHelper {
                 return o2.getLikes() - o1.getLikes();
             }
         });
-        
         System.out.println("5 most likes comments: ");
         for (int i = 0; i < commentList.size() && i < 5; i++) {
             System.out.println(commentList.get(i));
@@ -70,9 +69,6 @@ public class AnalysisHelper {
    // 1). Find Average number of likes per comment.
     
     public void avgLIkesPerComment(){
-        
-     /*   Map<Integer,Comment> useLikesCount = DataStore.getInstance().getComments();
-        List<Comment> commentList = new ArrayList<>(useLikesCount.values());*/
         
         Map<Integer, Integer> userLikesCount = new HashMap<>();
         Map<Integer, User> users = DataStore.getInstance().getUsers();
@@ -114,8 +110,7 @@ public class AnalysisHelper {
             }
         });
         
-            System.out.println("2. Post With Most Like Post"+commentList.get(0));
-        
+            System.out.println("2. Post With Most Like Post"+commentList.get(0));  
     }
     
   // 3) Find the post with most comments.
