@@ -17,8 +17,7 @@ import lab7.entities.User;
  */
 public class DataStore {
     
-    private static DataStore dataStore;
-    
+    private static DataStore dataStore; 
     private Map<Integer, User> users;
     private Map<Integer, Post> posts;
     private Map<Integer, Comment> comments;
