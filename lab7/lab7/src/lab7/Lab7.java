@@ -15,7 +15,7 @@ import lab7.entities.User;
 
 /**
  *
- * @author harshalneelkamal
+ * @author 
  */
 public class Lab7 {
 
@@ -95,7 +95,6 @@ public class Lab7 {
         // find user with Most Likes
         helper.userWithMostLikes();
         helper.getFiveMostLikedComment();
-       
         helper.avgLIkesPerComment();
          helper.MostlikePost();
         helper.PostwithMostComment();
