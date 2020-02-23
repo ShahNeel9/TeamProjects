@@ -13,16 +13,12 @@ import lab7.entities.User;
 
 /**
  *
- * @author
+ * @author harshalneelkamal
  */
 public class DataStore {
     
-<<<<<<< HEAD
     private static DataStore dataStore;
     
-=======
-    private static DataStore dataStore; 
->>>>>>> 2cb2781ebe116a9f0e3be793b93b472cc4caa319
     private Map<Integer, User> users;
     private Map<Integer, Post> posts;
     private Map<Integer, Comment> comments;
