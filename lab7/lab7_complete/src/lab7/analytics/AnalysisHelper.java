@@ -179,8 +179,21 @@ public class AnalysisHelper {
 
     public void inactiveUserbyComment(){
         
-       Map<Integer, Integer> commentsCount = new HashMap<>();
-        Map<Integer, Post> posts = DataStore.getInstance().getPosts();
+        Map<Integer, User> users = DataStore.getInstance().getUsers();
+        List<User> commentList = new ArrayList<>(users.values());
+        
+         
+         Collections.sort(commentList, new Comparator<User>() {
+            @Override
+            public int compare(User o1, User o2) {
+                return  o1.getComments().size() - o2.getComments().size();
+            } 
+        });  
+         
+         System.out.println("5. Top 5 inactive users based on comments:");
+        for(int i = 0; i<commentList.size() && i <5; i++){
+       System.out.println(commentList.get(i));
+   }
         
     }
     

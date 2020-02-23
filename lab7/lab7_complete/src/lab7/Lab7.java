@@ -100,5 +100,6 @@ public class Lab7 {
         helper.PostwithMostComment();
         helper.avgLIkesPerComment();
         helper.inactiveUserbypost();
+        helper.inactiveUserbyComment();
     }
 }
