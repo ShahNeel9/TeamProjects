@@ -39,7 +39,7 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
         this.flightdirectory = flightdirectory;
 
         for(Airliner a : this.airlinerDirectory.getAirlinedirectory()){
-             a.getName();
+             //a.getName();
              airlinecombo.addItem(a.getName());
         }
         

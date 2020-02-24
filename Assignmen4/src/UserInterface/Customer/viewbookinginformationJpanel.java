@@ -5,13 +5,6 @@
  */
 package UserInterface.Customer;
 
-import Buisness.Flight;
-import java.awt.CardLayout;
-import java.awt.Component;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import javax.swing.JPanel;
-
 /**
  *
  * @author patel
@@ -78,23 +71,23 @@ public class viewbookinginformationJpanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        backBtn = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        airlinerTextField = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        flightNumTextField = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        sourceTextField = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        destinationTextField = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        depTimeTextField = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        arrTimeTextField = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        durationTextField = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        todTextField = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         seatTextField = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
@@ -120,7 +113,7 @@ public class viewbookinginformationJpanel extends javax.swing.JPanel {
 
         destinationTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                destinationTextFieldActionPerformed(evt);
+                jTextField4ActionPerformed(evt);
             }
         });
 
@@ -141,7 +134,7 @@ public class viewbookinginformationJpanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -226,37 +219,15 @@ public class viewbookinginformationJpanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void destinationTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_destinationTextFieldActionPerformed
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_destinationTextFieldActionPerformed
-
-    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
-        // TODO add your handling code here:
-        cardSequenceJPanel.remove(this);
-        CardLayout layout= (CardLayout) cardSequenceJPanel.getLayout();
-        
-        Component[] components = cardSequenceJPanel.getComponents();
-        for(Component component: components){
-            if(component instanceof CustomerinformationJpanel){
-                CustomerinformationJpanel panel= (CustomerinformationJpanel) component;
-                panel.populateTable();
-            }
-        }
-        layout.previous(cardSequenceJPanel);
-    }//GEN-LAST:event_backBtnActionPerformed
+    }//GEN-LAST:event_jTextField4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField airlinerTextField;
-    private javax.swing.JTextField arrTimeTextField;
-    private javax.swing.JButton backBtn;
-    private javax.swing.JTextField depTimeTextField;
-    private javax.swing.JTextField destinationTextField;
-    private javax.swing.JTextField durationTextField;
-    private javax.swing.JTextField flightNumTextField;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -265,9 +236,14 @@ public class viewbookinginformationJpanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField seatTextField;
-    private javax.swing.JTextField sourceTextField;
-    private javax.swing.JTextField timeTextField;
-    private javax.swing.JTextField todTextField;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }

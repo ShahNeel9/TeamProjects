@@ -6,14 +6,7 @@
 package UserInterface.Customer;
 
 import Buisness.AirlinerDirectory;
-import Buisness.Customer;
-import Buisness.Flight;
-import java.awt.CardLayout;
-import java.util.List;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.table.DefaultTableModel;
-
 
 /**
  *
@@ -76,17 +69,12 @@ public class CustomerinformationJpanel extends javax.swing.JPanel {
                 {null, null, null, null, null}
             },
             new String [] {
-                "First Name", "Last Name", "Age", "Phone Number", "SSN"
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
         jScrollPane1.setViewportView(customerTbl);
 
-        viewBookingInfoBtn.setText("View Booking Information");
-        viewBookingInfoBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viewBookingInfoBtnActionPerformed(evt);
-            }
-        });
+        jButton1.setText("View Booking Information");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -116,29 +104,11 @@ public class CustomerinformationJpanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void viewBookingInfoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewBookingInfoBtnActionPerformed
-        // TODO add your handling code here:
-        int selectedRow= customerTbl.getSelectedRow();
-        if(selectedRow>=0){
-            System.out.println("++++++++++++++++++++++++++++" +selectedRow);
-            Flight bookedFlight= customerList.get(selectedRow).getFlightBooked();
-            System.out.println("+++++++++++++++++++++++++++++++++++" +bookedFlight);
-            viewbookinginformationJpanel panel= new viewbookinginformationJpanel(cardSequenceJpanel,bookedFlight,customerList.get(selectedRow).getSeatBooked());
-            cardSequenceJpanel.add("FlightDetailJPanel",panel);
-           CardLayout layout = (CardLayout) cardSequenceJpanel.getLayout();
-           layout.next(cardSequenceJpanel);
-        }
-        else{
-            JOptionPane.showMessageDialog(null, "Please select a row");
-        }
-        
-    }//GEN-LAST:event_viewBookingInfoBtnActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable customerTbl;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton viewBookingInfoBtn;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

@@ -7,8 +7,6 @@ package UserInterface;
 
 import Buisness.Airliner;
 import Buisness.AirlinerDirectory;
-import Buisness.Customer;
-import Buisness.CustomerDirectory;
 import Buisness.FlightDirectory;
 import Buisness.Seats;
 import UserInterface.Customer.CustomerinformationJpanel;
@@ -16,7 +14,6 @@ import UserInterface.ManageAirliners.CreateNewAirlinerJpanel;
 import UserInterface.ManageAirliners.ManageAirlinersJpanel;
 import UserInterface.TravelAgency.ManageMasterFlightScheduleJPanel;
 import java.awt.CardLayout;
-import java.util.List;
 import javax.swing.JPanel;
 
 /**
@@ -31,7 +28,6 @@ public class TravelAgencyMain extends javax.swing.JFrame {
      */
     private AirlinerDirectory airdirectory;
     private FlightDirectory flightdirectory;
-    private CustomerDirectory customerDirectory;
    // private JPanel CardSequenceJpanel;
     private Seats seat1;
     public TravelAgencyMain() {
@@ -137,7 +133,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
     private void btnCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCustomerActionPerformed
         // TODO add your handling code here:
          CardLayout layout = (CardLayout)CardSequenceJpanel.getLayout();
-        CardSequenceJpanel.add(new CustomerinformationJpanel(CardSequenceJpanel, CustomerDirectory.customerdirectory));
+        CardSequenceJpanel.add(new CustomerinformationJpanel(CardSequenceJpanel,airdirectory));
         layout.next(CardSequenceJpanel);
     }//GEN-LAST:event_btnCustomerActionPerformed
 
