@@ -8,6 +8,7 @@ package UserInterface;
 import Buisness.Airliner;
 import Buisness.AirlinerDirectory;
 import Buisness.FlightDirectory;
+import Buisness.Seats;
 import UserInterface.Customer.CustomerinformationJpanel;
 import UserInterface.ManageAirliners.CreateNewAirlinerJpanel;
 import UserInterface.ManageAirliners.ManageAirlinersJpanel;
@@ -28,11 +29,14 @@ public class TravelAgencyMain extends javax.swing.JFrame {
     private AirlinerDirectory airdirectory;
     private FlightDirectory flightdirectory;
    // private JPanel CardSequenceJpanel;
+    private Seats seat1;
     public TravelAgencyMain() {
  
         initComponents();
         this.airdirectory= new AirlinerDirectory();
         this.flightdirectory = new FlightDirectory();
+        this.customerDirectory=new CustomerDirectory();
+        this.seat1=new Seats();
     }
 
     /**
@@ -114,6 +118,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
       
          ManageAirlinersJpanel panel = new ManageAirlinersJpanel(CardSequenceJpanel, airdirectory);
         CardSequenceJpanel.add("ManageAirlinersJpanel",panel);
+        
         CardLayout layout = (CardLayout)CardSequenceJpanel.getLayout();
         layout.next(CardSequenceJpanel);
         
@@ -135,7 +140,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
     private void btntravelagencyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntravelagencyActionPerformed
         // TODO add your handling code here:
         CardLayout layout = (CardLayout)CardSequenceJpanel.getLayout();
-        CardSequenceJpanel.add(new ManageMasterFlightScheduleJPanel(CardSequenceJpanel,flightdirectory));
+        CardSequenceJpanel.add(new ManageMasterFlightScheduleJPanel(CardSequenceJpanel,flightdirectory,seat1));
         layout.next(CardSequenceJpanel);
     }//GEN-LAST:event_btntravelagencyActionPerformed
 

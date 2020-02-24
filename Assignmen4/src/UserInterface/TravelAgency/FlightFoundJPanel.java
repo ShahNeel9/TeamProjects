@@ -6,6 +6,7 @@
 package UserInterface.TravelAgency;
 
 import Buisness.Flight;
+import Buisness.Seats;
 import java.awt.CardLayout;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -23,11 +24,13 @@ public class FlightFoundJPanel extends javax.swing.JPanel {
      */
     private JPanel cardSequenceJPanel;
     private ArrayList<Flight> flightDirFiltered;
+    private Seats seat1;
     
-    public FlightFoundJPanel(JPanel cardSequenceJPanel, ArrayList<Flight> flightDirFiltered) {
+    public FlightFoundJPanel(JPanel cardSequenceJPanel, ArrayList<Flight> flightDirFiltered, Seats seat1) {
         initComponents();
         this.cardSequenceJPanel=cardSequenceJPanel;
         this.flightDirFiltered=flightDirFiltered;
+        this.seat1=seat1;
         populateTable();
     }
     
@@ -138,7 +141,7 @@ public class FlightFoundJPanel extends javax.swing.JPanel {
         if(selectedRow > -1){
             Flight selectedFlight = flightDirFiltered.get(selectedRow);
             
-            FlightDetailJPanel panel = new FlightDetailJPanel(cardSequenceJPanel, selectedFlight);
+            FlightDetailJPanel panel = new FlightDetailJPanel(cardSequenceJPanel, selectedFlight, seat1);
             cardSequenceJPanel.add("FlightFoundDetailJPanel",panel);
             CardLayout layout = (CardLayout) cardSequenceJPanel.getLayout();
             layout.next(cardSequenceJPanel);

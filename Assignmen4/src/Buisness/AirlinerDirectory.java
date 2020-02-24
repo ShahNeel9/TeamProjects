@@ -31,11 +31,6 @@ public class AirlinerDirectory {
         airlinedirectory.add(a);
     }
     
-    public Airliner addAirlinear(){
-        Airliner airliner = new Airliner();
-        airlinedirectory.add(airliner);
-        return airliner;
-    }
     public void removeAirline(Airliner a){
         airlinedirectory.remove(a);
     }

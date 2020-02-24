@@ -49,9 +49,6 @@ public class Airliner {
     public void setOrigin_country(String origin_country) {
         this.origin_country = origin_country;
     }
-   @Override
-    public String toString(){
-        return this.name;
-    }
+   
             
 }

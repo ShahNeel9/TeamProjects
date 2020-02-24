@@ -120,8 +120,5 @@ public class Flight {
         this.price = price;
     }
     
-    @Override
-    public String toString(){
-        return this.airline;
-    }
+    
 }

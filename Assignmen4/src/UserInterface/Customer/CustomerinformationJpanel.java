@@ -17,15 +17,32 @@ public class CustomerinformationJpanel extends javax.swing.JPanel {
     /**
      * Creates new form CustomerinformationJpanel
      */
-    private AirlinerDirectory airlinerdirectory;
-    private JPanel CardSequenceJpanel;
-    public CustomerinformationJpanel(JPanel CardSequenceJpanel, AirlinerDirectory airdirectory) {
+    //private AirlinerDirectory airlinerdirectory;
+    private JPanel cardSequenceJpanel;
+    private List<Customer> customerList;
+    
+    public CustomerinformationJpanel(JPanel CardSequenceJpanel, List <Customer> customerList) {
         initComponents();
-       this.CardSequenceJpanel=CardSequenceJpanel;
-       this.airlinerdirectory=airlinerdirectory;
+       this.cardSequenceJpanel=CardSequenceJpanel;
+       this.customerList=customerList;
+        populateTable();
+      
     }
 
-   
+   public void populateTable(){
+       DefaultTableModel dtm= (DefaultTableModel) customerTbl.getModel();
+       dtm.setRowCount(0);
+       
+       for(Customer c: customerList){
+           Object[] row= new Object[dtm.getColumnCount()];
+           row[0]= c.getFirstName();
+           row[1]=c.getLastName();
+           row[2]=c.getAge();
+           row[3]=c.getPhoneNumber();
+           row[4]=c.getSsn();
+           dtm.addRow(row);
+       }
+   }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -38,23 +55,24 @@ public class CustomerinformationJpanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        customerTbl = new javax.swing.JTable();
+        viewBookingInfoBtn = new javax.swing.JButton();
 
-        jLabel1.setText("Customer");
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Customers");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        customerTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(customerTbl);
 
         jButton1.setText("View Booking Information");
 
@@ -65,13 +83,13 @@ public class CustomerinformationJpanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(61, 61, 61)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1)
+                    .addComponent(viewBookingInfoBtn)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(75, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(324, 324, 324))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(223, 223, 223))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -81,8 +99,8 @@ public class CustomerinformationJpanel extends javax.swing.JPanel {
                 .addGap(47, 47, 47)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(62, 62, 62)
-                .addComponent(jButton1)
-                .addContainerGap(278, Short.MAX_VALUE))
+                .addComponent(viewBookingInfoBtn)
+                .addContainerGap(269, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

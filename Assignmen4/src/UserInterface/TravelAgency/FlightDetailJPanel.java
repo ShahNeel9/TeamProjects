@@ -28,26 +28,32 @@ public class FlightDetailJPanel extends javax.swing.JPanel {
      */
     private JPanel cardSequenceJPanel;
     private Flight selectedFlight;
+    private Seats seat1;
     
-    public FlightDetailJPanel(JPanel cardSequenceJPanel, Flight selectedFlight) {
+    public FlightDetailJPanel(JPanel cardSequenceJPanel, Flight selectedFlight, Seats seat1) {
         initComponents();
         this.cardSequenceJPanel=cardSequenceJPanel;
         this.selectedFlight= selectedFlight;
+        this.seat1=seat1;
         flightNumbTF.setText(selectedFlight.getFlightnumber());
         priceTF.setText(Double.toString(selectedFlight.getPrice()));
-       // seatSelectComboBoxBuild();
-       
-       
+        
+        seatSelection();
     }
-
-     public void seatSelectComboBoxBuild(){
-        DefaultComboBoxModel cBmodel = new DefaultComboBoxModel();
-        cBmodel.addElement("Select Seat");
-        for(int i=0;i<selectedFlight.getSeats().getSeat().size();i++){
-            
-            cBmodel.addElement(selectedFlight.getSeats().getSeat().get(i));
+    
+    public void seatSelection(){
+        DefaultComboBoxModel cbm= new DefaultComboBoxModel();
+        cbm.addElement("Select Seat");
+        //System.out.println("++++++++++++++++++++++++++++++++++++++@@@@@@@@@@@@@@@@@@@@@@@@@@" + );
+        System.out.println("==================================================================" +seat1);
+        System.out.println("+++++++++++++++++++++++++++++++++++" +seat1.getSeat().size());
+        for (int i=0; i< seat1.getSeat().size();i++){
+            cbm.addElement(seat1.getSeat().get(i));
         }
-        seatComboBox.setModel(cBmodel);
+        seatComboBox.setModel(cbm);
+        
+        //seatComboBox.setModel(new DefaultComboBoxModel<Seats>());
+        
     }
     /**
      * This method is called from within the constructor to initialize the form.

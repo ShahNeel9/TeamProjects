@@ -7,6 +7,7 @@ package UserInterface.TravelAgency;
 
 import Buisness.Flight;
 import Buisness.FlightDirectory;
+import Buisness.Seats;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.text.ParseException;
@@ -29,11 +30,12 @@ public class ManageMasterFlightScheduleJPanel extends javax.swing.JPanel {
      */
     private JPanel cardSequenceJPanel;
     private FlightDirectory flightDir;
-    
-    public ManageMasterFlightScheduleJPanel(JPanel cardSequenceJPanel, FlightDirectory flightDir) {
+    private Seats seat1;
+    public ManageMasterFlightScheduleJPanel(JPanel cardSequenceJPanel, FlightDirectory flightDir, Seats seat1) {
         initComponents();
         this.cardSequenceJPanel=cardSequenceJPanel;
         this.flightDir= flightDir;
+        this.seat1=seat1;
         populateTable();
         otodComboBox.setSelectedItem("Select Option");
     }
@@ -43,7 +45,7 @@ public class ManageMasterFlightScheduleJPanel extends javax.swing.JPanel {
         dtm.setRowCount(0);
         for(Flight a: flightDir.getFlightdirectory()){
             Object[] row= new Object[dtm.getColumnCount()];
-            row[0]= a;
+            row[0]= a.getAirline();
             row[1]=a.getFlightnumber();
             row[2]=a.getSource();
             row[3]=a.getDestination();
@@ -203,7 +205,6 @@ public class ManageMasterFlightScheduleJPanel extends javax.swing.JPanel {
         }
         else{
             destinationTxtField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-            System.out.println(destinationTxtField.getText());
             jLabel2.setForeground(Color.BLACK);
         }
 
@@ -221,13 +222,22 @@ public class ManageMasterFlightScheduleJPanel extends javax.swing.JPanel {
 
         if(otodComboBox.getSelectedItem().equals("Select Option")){
             JOptionPane.showMessageDialog(null, "Please enter preferred time of the day");
-            System.out.println(otodComboBox.getSelectedItem());
             return;
         }
-        //SimpleDateFormat formatter = new SimpleDateFormat("dd-mm-yyyy");
+        
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-mm-yyyy");
         Date date = jXDatePicker.getDate();
-        System.out.println(date);
-
+        
+        if((sourceTxtField.getText()).equalsIgnoreCase(destinationTxtField.getText())){
+            JOptionPane.showMessageDialog(null, "Source and Destination cannot be same");
+            return;
+        }
+        else{
+            sourceTxtField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            destinationTxtField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        }
+        
+        
        /* try {
 
             Date date = jXDatePicker.getDate();
@@ -241,13 +251,14 @@ public class ManageMasterFlightScheduleJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please enter date in dd-mm-yyyy format");
             return;
         }*/
-        ArrayList<Flight> flightDirFiltered = flightDir.searchMaster(destinationTxtField.getText(),sourceTxtField.getText(),otodComboBox.getSelectedItem().toString(),jXDatePicker.getDate());
+        ArrayList<Flight> flightDirFiltered = flightDir.searchMaster(destinationTxtField.getText(),sourceTxtField.getText(),otodComboBox.getSelectedItem().toString(),date);
+        System.out.println(flightDirFiltered);
         //System.out.println(flightDirFiltered);
          if(flightDirFiltered.isEmpty()){
             JOptionPane.showMessageDialog(null, "There are no flights as per your schedule! Please try again");
              clearSearchFields();
         }else{
-        FlightFoundJPanel panel = new FlightFoundJPanel(cardSequenceJPanel, flightDirFiltered);
+        FlightFoundJPanel panel = new FlightFoundJPanel(cardSequenceJPanel, flightDirFiltered, seat1 );
         cardSequenceJPanel.add("FlightFoundJPanel",panel);
         CardLayout layout = (CardLayout)cardSequenceJPanel.getLayout();
         layout.next(cardSequenceJPanel);
