@@ -6,7 +6,14 @@
 package UserInterface.Customer;
 
 import Buisness.AirlinerDirectory;
+import Buisness.Customer;
+import Buisness.Flight;
+import java.awt.CardLayout;
+import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+
 
 /**
  *
@@ -38,59 +45,91 @@ public class CustomerinformationJpanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        customerTbl = new javax.swing.JTable();
+        viewBookingInfoBtn = new javax.swing.JButton();
 
-        jLabel1.setText("Customer");
+        setBackground(new java.awt.Color(102, 102, 102));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("CUSTOMER INFORMATION");
+
+        customerTbl.setBackground(new java.awt.Color(153, 153, 153));
+        customerTbl.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        customerTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "First Name", "Last Name", "Age", "Phone Number", "SSN"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        customerTbl.setRowHeight(30);
+        jScrollPane1.setViewportView(customerTbl);
 
-        jButton1.setText("View Booking Information");
+        viewBookingInfoBtn.setText("View Booking Information");
+        viewBookingInfoBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewBookingInfoBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addGap(702, 702, 702)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 502, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(324, 324, 324))
+                .addContainerGap(585, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(viewBookingInfoBtn)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 782, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(553, 553, 553))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(110, 110, 110)
                 .addComponent(jLabel1)
-                .addGap(47, 47, 47)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62)
-                .addComponent(jButton1)
-                .addContainerGap(278, Short.MAX_VALUE))
+                .addGap(137, 137, 137)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(195, 195, 195)
+                .addComponent(viewBookingInfoBtn)
+                .addContainerGap(350, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void viewBookingInfoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewBookingInfoBtnActionPerformed
+        // TODO add your handling code here:
+        int selectedRow= customerTbl.getSelectedRow();
+        if(selectedRow>=0){
+            System.out.println("++++++++++++++++++++++++++++" +selectedRow);
+            Flight bookedFlight= customerList.get(selectedRow).getFlightBooked();
+            System.out.println("+++++++++++++++++++++++++++++++++++" +bookedFlight);
+            viewbookinginformationJpanel panel= new viewbookinginformationJpanel(cardSequenceJpanel,bookedFlight,customerList.get(selectedRow).getSeatBooked());
+            cardSequenceJpanel.add("FlightDetailJPanel",panel);
+           CardLayout layout = (CardLayout) cardSequenceJpanel.getLayout();
+           layout.next(cardSequenceJpanel);
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Please select a row");
+        }
+        
+    }//GEN-LAST:event_viewBookingInfoBtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JTable customerTbl;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JButton viewBookingInfoBtn;
     // End of variables declaration//GEN-END:variables
 }

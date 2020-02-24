@@ -215,7 +215,6 @@ public class ManageMasterFlightScheduleJPanel extends javax.swing.JPanel {
         }
         else{
             sourceTxtField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-            System.out.println(sourceTxtField.getText());
             jLabel3.setForeground(Color.BLACK);
         }
 

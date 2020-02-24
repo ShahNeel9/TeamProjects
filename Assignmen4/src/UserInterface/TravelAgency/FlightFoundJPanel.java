@@ -37,7 +37,7 @@ public class FlightFoundJPanel extends javax.swing.JPanel {
         
         for(Flight a :flightDirFiltered){
             Object[] row = new Object[dtm.getColumnCount()];
-            row[0] = a;
+            row[0] = a.getAirline();
             row[1] = a.getFlightnumber();
             row[2] = a.getSource();
             row[3] = a.getDestination();

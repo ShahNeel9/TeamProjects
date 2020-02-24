@@ -34,17 +34,16 @@ public class FlightDetailJPanel extends javax.swing.JPanel {
         this.selectedFlight= selectedFlight;
         flightNumbTF.setText(selectedFlight.getFlightnumber());
         priceTF.setText(Double.toString(selectedFlight.getPrice()));
-        seatSelectComboBoxBuild();
-       
+        seatSelection();
     }
-
-     public void seatSelectComboBoxBuild(){
-        DefaultComboBoxModel cBmodel = new DefaultComboBoxModel();
-        cBmodel.addElement("Select Seat");
-        for(int i=0;i<selectedFlight.getSeats().getSeat().size();i++){
-            cBmodel.addElement(selectedFlight.getSeats().getSeat().get(i));
+    
+    public void seatSelection(){
+        DefaultComboBoxModel cbm= new DefaultComboBoxModel();
+        cbm.addElement("Select Seat");
+        for (int i=0;i< selectedFlight.getSeats().getSeat().size();i++){
+            cbm.addElement(selectedFlight.getSeats().getSeat().get(i));
         }
-        seatComboBox.setModel(cBmodel);
+        seatComboBox.setModel(cbm);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -124,7 +123,7 @@ public class FlightDetailJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(89, 89, 89)
+                .addGap(98, 98, 98)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel6)
@@ -162,7 +161,7 @@ public class FlightDetailJPanel extends javax.swing.JPanel {
                         .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(bookBtn)))
-                .addContainerGap(219, Short.MAX_VALUE))
+                .addContainerGap(210, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -312,12 +311,12 @@ public class FlightDetailJPanel extends javax.swing.JPanel {
         Customer newCustomer = new Customer();
         newCustomer.setFirstName(firstNameTF.getText());
         newCustomer.setLastName(lastNameTF.getText());
-        newCustomer.setAge((int)Double.parseDouble(ageTF.getText()));
+        newCustomer.setAge(Integer.parseInt(ageTF.getText()));
         newCustomer.setPhoneNumber(phoneTF.getText());
         newCustomer.setSsn(ssnTF.getText());
         newCustomer.setFlightBooked(selectedFlight);
         newCustomer.setSeatBooked(seatComboBox.getSelectedItem().toString());
-        newCustomer.setPrice(Integer.parseInt(priceTF.getText()));
+        //newCustomer.setPrice(Integer.parseInt(priceTF.getText()));
         //CustomerDirectory customerDir = new CustomerDirectory();
         CustomerDirectory.customerdirectory.add(newCustomer);
         
