@@ -17,55 +17,12 @@ import javax.swing.JPanel;
  * @author patel
  */
 public class viewbookinginformationJpanel extends javax.swing.JPanel {
-    private JPanel cardSequenceJPanel;
-    private Flight bookedFlight;
-    private String seatBooked;
-    
+
     /**
      * Creates new form viewbookinginformationJpanel
      */
-    public viewbookinginformationJpanel(JPanel cardSequenceJPanel, Flight bookedFlight, String seatBooked) {
+    public viewbookinginformationJpanel() {
         initComponents();
-        this.cardSequenceJPanel=cardSequenceJPanel;
-        this.bookedFlight=bookedFlight;
-        this.seatBooked=seatBooked;
-        populateTextFields();
-        enable();
-    }
-    
-    private void populateTextFields(){
-        airlinerTextField.setText(bookedFlight.getAirline());
-        flightNumTextField.setText(bookedFlight.getFlightnumber());
-        destinationTextField.setText(bookedFlight.getDestination());
-        sourceTextField.setText(bookedFlight.getSource());
-        arrTimeTextField.setText(bookedFlight.getArrTime());
-        depTimeTextField.setText(bookedFlight.getDepTime());
-        durationTextField.setText(Integer.toString(bookedFlight.getDuration()));
-        todTextField.setText(bookedFlight.getTime());
-        String strDate = "";
-        try {
-            DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-            strDate = dateFormat.format(bookedFlight.getDate());
-            //System.out.println("Converted String: " + strDate);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        timeTextField.setText(strDate);
-        seatTextField.setText(seatBooked);
-    }
-    
-    public void enable(){
-        airlinerTextField.setEnabled(false);
-        flightNumTextField.setEnabled(false);
-        destinationTextField.setEnabled(false);
-        sourceTextField.setEnabled(false);
-        arrTimeTextField.setEnabled(false);
-        depTimeTextField.setEnabled(false);
-        durationTextField.setEnabled(false);
-        todTextField.setEnabled(false);
-        timeTextField.setEnabled(false);
-        seatTextField.setEnabled(false);
-        
     }
 
     /**

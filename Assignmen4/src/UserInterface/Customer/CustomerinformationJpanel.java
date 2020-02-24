@@ -24,32 +24,15 @@ public class CustomerinformationJpanel extends javax.swing.JPanel {
     /**
      * Creates new form CustomerinformationJpanel
      */
-    //private AirlinerDirectory airlinerdirectory;
-    private JPanel cardSequenceJpanel;
-    private List<Customer> customerList;
-    
-    public CustomerinformationJpanel(JPanel CardSequenceJpanel, List <Customer> customerList) {
+    private AirlinerDirectory airlinerdirectory;
+    private JPanel CardSequenceJpanel;
+    public CustomerinformationJpanel(JPanel CardSequenceJpanel, AirlinerDirectory airdirectory) {
         initComponents();
-       this.cardSequenceJpanel=CardSequenceJpanel;
-       this.customerList=customerList;
-        populateTable();
-      
+       this.CardSequenceJpanel=CardSequenceJpanel;
+       this.airlinerdirectory=airlinerdirectory;
     }
 
-   public void populateTable(){
-       DefaultTableModel dtm= (DefaultTableModel) customerTbl.getModel();
-       dtm.setRowCount(0);
-       
-       for(Customer c: customerList){
-           Object[] row= new Object[dtm.getColumnCount()];
-           row[0]= c.getFirstName();
-           row[1]=c.getLastName();
-           row[2]=c.getAge();
-           row[3]=c.getPhoneNumber();
-           row[4]=c.getSsn();
-           dtm.addRow(row);
-       }
-   }
+   
 
     /**
      * This method is called from within the constructor to initialize the form.

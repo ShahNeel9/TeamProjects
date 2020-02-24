@@ -49,7 +49,7 @@ public class ManageAirlinersJpanel extends javax.swing.JPanel {
         
          for(Airliner a : airlinerdirectory.getAirlinedirectory()){
             Object[] row = new Object[dtm.getColumnCount()];
-            row[0]= a.getName();
+            row[0]= a;
             row[1]= a.getAirlinecode();
             row[2]= a.getNumofFlight();
            // row[3] = a.getCountryOperated();
@@ -244,30 +244,18 @@ public class ManageAirlinersJpanel extends javax.swing.JPanel {
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         // TODO add your handling code here:
-       /* 
-        int selectedrow = tblAirliner.getSelectedRow();
-        System.out.println(selectedrow);
-        
-        if(selectedrow >=0){
-            
-            
-            Airliner airliner = (Airliner)tblAirliner.getValueAt(selectedrow,0);
-            airlinerdirectory.removeAirline(airliner);
-            PopulateTable();
-            JOptionPane.showMessageDialog(null, "Deleted successfully");
-            
-            
-        }else{
-            JOptionPane.showMessageDialog(null, "Please select a Row!!");
-        }*/
+       
        
        
        int selectedRow = tblAirliner.getSelectedRow();
-        if(selectedRow>=0){
+        
+        if(selectedRow> -1){
             int selectionButton = JOptionPane.YES_NO_OPTION;
             int selectionResult = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete??","Warning",selectionButton);
             if(selectionResult == JOptionPane.YES_OPTION){
+               
                 Airliner airliner = (Airliner)tblAirliner.getValueAt(selectedRow, 0);
+                System.out.println(airliner);
                 airlinerdirectory.removeAirline(airliner);
                 PopulateTable();
             }

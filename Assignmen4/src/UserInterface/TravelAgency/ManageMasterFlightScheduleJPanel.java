@@ -43,7 +43,7 @@ public class ManageMasterFlightScheduleJPanel extends javax.swing.JPanel {
         dtm.setRowCount(0);
         for(Flight a: flightDir.getFlightdirectory()){
             Object[] row= new Object[dtm.getColumnCount()];
-            row[0]= a.getAirline();
+            row[0]= a;
             row[1]=a.getFlightnumber();
             row[2]=a.getSource();
             row[3]=a.getDestination();
@@ -203,6 +203,7 @@ public class ManageMasterFlightScheduleJPanel extends javax.swing.JPanel {
         }
         else{
             destinationTxtField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            System.out.println(destinationTxtField.getText());
             jLabel2.setForeground(Color.BLACK);
         }
 
@@ -219,11 +220,12 @@ public class ManageMasterFlightScheduleJPanel extends javax.swing.JPanel {
 
         if(otodComboBox.getSelectedItem().equals("Select Option")){
             JOptionPane.showMessageDialog(null, "Please enter preferred time of the day");
+            System.out.println(otodComboBox.getSelectedItem());
             return;
         }
-        
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-mm-yyyy");
+        //SimpleDateFormat formatter = new SimpleDateFormat("dd-mm-yyyy");
         Date date = jXDatePicker.getDate();
+        System.out.println(date);
 
        /* try {
 
@@ -238,8 +240,7 @@ public class ManageMasterFlightScheduleJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please enter date in dd-mm-yyyy format");
             return;
         }*/
-        ArrayList<Flight> flightDirFiltered = flightDir.searchMaster(destinationTxtField.getText(),sourceTxtField.getText(),otodComboBox.getSelectedItem().toString(),date);
-        System.out.println(flightDirFiltered);
+        ArrayList<Flight> flightDirFiltered = flightDir.searchMaster(destinationTxtField.getText(),sourceTxtField.getText(),otodComboBox.getSelectedItem().toString(),jXDatePicker.getDate());
         //System.out.println(flightDirFiltered);
          if(flightDirFiltered.isEmpty()){
             JOptionPane.showMessageDialog(null, "There are no flights as per your schedule! Please try again");

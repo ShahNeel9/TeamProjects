@@ -271,13 +271,13 @@ public class CreateNewAirlinerJpanel extends javax.swing.JPanel {
             return;
         }
         
-        Airliner airliner = new Airliner();
+        Airliner airliner = airlinerDirectory.addAirlinear();
         airliner.setName(name);
         airliner.setAirlinecode(air_id);
         airliner.setNumofFlight(Integer.parseInt(txtNum_flight.getText()));
         //airliner.setCountryOperated(Integer.parseInt(txtC_operated.getText()));
         airliner.setOrigin_country(origin_c);
-        airlinerDirectory.addAirline(airliner);
+        //airlinerDirectory.addAirline(airliner);
         JOptionPane.showMessageDialog(null, "Airliner Created Sucessfully");
         
         txtName.setText("");
