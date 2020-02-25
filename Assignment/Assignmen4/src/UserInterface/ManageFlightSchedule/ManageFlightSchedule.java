@@ -50,7 +50,7 @@ public class ManageFlightSchedule extends javax.swing.JPanel {
             Object[] row = new Object[dtm.getColumnCount()];
             row[0]= a;
             row[1]= a.getFlightnumber();
-            //row[2]= "";
+            row[2]= a.getModel();
             row[2] = a.getSource();
             row[3] = a.getDestination();
             row[4] = a.getDepTime();
