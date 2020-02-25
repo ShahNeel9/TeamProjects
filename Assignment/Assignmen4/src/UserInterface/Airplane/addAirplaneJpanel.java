@@ -27,12 +27,12 @@ public class addAirplaneJpanel extends javax.swing.JPanel {
      */
      private AirlinerDirectory airlinerdirectory;
     private JPanel CardSequenceJpanel;
-    private AirplaneDirectory airplanedir;
-    public addAirplaneJpanel(JPanel CardSequenceJpanel, AirlinerDirectory airlinerdirectory) {
+    private AirplaneDirectory airplanedirectory;
+    public addAirplaneJpanel(JPanel CardSequenceJpanel, AirlinerDirectory airlinerdirectory,AirplaneDirectory airplanedirectory) {
         initComponents();
         this.CardSequenceJpanel=CardSequenceJpanel;
         this.airlinerdirectory=airlinerdirectory;
-        this.airplanedir= new AirplaneDirectory();
+        this.airplanedirectory = airplanedirectory;
         for(Airliner a : this.airlinerdirectory.getAirlinedirectory()){
              //a.getName();
              aircombo.addItem(a.getName());
@@ -171,7 +171,7 @@ public class addAirplaneJpanel extends javax.swing.JPanel {
         airplane.setAirliner(airline);
         airplane.setModel(model);
         airplane.setSeatnumber(seat);
-        airplanedir.addAirplane(airplane);
+        airplanedirectory.addAirplane(airplane);
       //  airliner.setAirplanelist((List<Airplane>) airplane);
        for(Airliner a : this.airlinerdirectory.getAirlinedirectory()){
            

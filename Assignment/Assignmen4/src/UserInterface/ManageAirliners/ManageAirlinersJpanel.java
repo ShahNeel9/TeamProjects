@@ -36,12 +36,12 @@ public class ManageAirlinersJpanel extends javax.swing.JPanel {
      *
      * 
      */
-    public ManageAirlinersJpanel(JPanel CardSequenceJpanel , AirlinerDirectory airlinerdirectory) {
+    public ManageAirlinersJpanel(JPanel CardSequenceJpanel , AirlinerDirectory airlinerdirectory,AirplaneDirectory airplanedirectory) {
         initComponents();
        this.CardSequenceJpanel=CardSequenceJpanel;
         this.airlinerdirectory =airlinerdirectory;
         this.flightdirectory=new FlightDirectory();
-       // this.airplanedirectory = airplanedirectory;
+       this.airplanedirectory = airplanedirectory;
         PopulateTable();
         
     }
@@ -239,7 +239,7 @@ public class ManageAirlinersJpanel extends javax.swing.JPanel {
     private void btnManageFlightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageFlightActionPerformed
         // TODO add your handling code here:
          CardLayout layout = (CardLayout)CardSequenceJpanel.getLayout();
-        CardSequenceJpanel.add(new ManageFlightSchedule(CardSequenceJpanel,airlinerdirectory,flightdirectory));
+        CardSequenceJpanel.add(new ManageFlightSchedule(CardSequenceJpanel,airlinerdirectory,flightdirectory,airplanedirectory));
         layout.next(CardSequenceJpanel);
     }//GEN-LAST:event_btnManageFlightActionPerformed
 
@@ -290,7 +290,7 @@ public class ManageAirlinersJpanel extends javax.swing.JPanel {
     private void btnAirplaneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAirplaneActionPerformed
         // TODO add your handling code here:
         CardLayout layout = (CardLayout)CardSequenceJpanel.getLayout();
-        CardSequenceJpanel.add(new addAirplaneJpanel(CardSequenceJpanel,airlinerdirectory));
+        CardSequenceJpanel.add(new addAirplaneJpanel(CardSequenceJpanel,airlinerdirectory,airplanedirectory));
         layout.next(CardSequenceJpanel);
     }//GEN-LAST:event_btnAirplaneActionPerformed
 

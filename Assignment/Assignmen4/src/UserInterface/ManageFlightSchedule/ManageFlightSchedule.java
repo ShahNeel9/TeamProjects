@@ -31,12 +31,12 @@ public class ManageFlightSchedule extends javax.swing.JPanel {
     private FlightDirectory flightdirectory;
     private AirplaneDirectory airplanedirectory;
     
-    public ManageFlightSchedule(JPanel CardSequenceJpanel, AirlinerDirectory airlinerdirectory,FlightDirectory flightdirectory) {
+    public ManageFlightSchedule(JPanel CardSequenceJpanel, AirlinerDirectory airlinerdirectory,FlightDirectory flightdirectory,AirplaneDirectory airplanedirectory) {
         initComponents();
         this.CardSequenceJpanel=CardSequenceJpanel;
         this.airlinerdirectory=airlinerdirectory;
         this.flightdirectory = flightdirectory;
-       // this.airplanedirectory = airplanedirectory;
+        this.airplanedirectory = airplanedirectory;
         PopulateTable();
         
     }
@@ -50,15 +50,15 @@ public class ManageFlightSchedule extends javax.swing.JPanel {
             Object[] row = new Object[dtm.getColumnCount()];
             row[0]= a;
             row[1]= a.getFlightnumber();
-            row[2]= "qqq";
-            row[3] = a.getSource();
-            row[4] = a.getDestination();
-            row[5] = a.getDepTime();
-            row[6] = a.getArrTime();
-            row[7] = a.getDuration();
-            row[8] = a.getDate();
-            row[9] = a.getTime();
-            row[10] = a.getPrice();
+            //row[2]= "";
+            row[2] = a.getSource();
+            row[3] = a.getDestination();
+            row[4] = a.getDepTime();
+            row[5] = a.getArrTime();
+            row[6] = a.getDuration();
+            row[7] = a.getDate();
+            row[8] = a.getTime();
+            row[9] = a.getPrice();
             dtm.addRow(row);
         }
    }
@@ -154,7 +154,7 @@ public class ManageFlightSchedule extends javax.swing.JPanel {
 
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
         // TODO add your handling code here:
-        CreateFlightSchedule panel = new CreateFlightSchedule(CardSequenceJpanel,airlinerdirectory,flightdirectory);
+        CreateFlightSchedule panel = new CreateFlightSchedule(CardSequenceJpanel,airlinerdirectory,flightdirectory,airplanedirectory);
         CardSequenceJpanel.add("CreateFlightSchedule",panel);
         CardLayout layout = (CardLayout)CardSequenceJpanel.getLayout();
         layout.next(CardSequenceJpanel);
