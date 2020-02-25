@@ -5,6 +5,7 @@
  */
 package Buisness;
 
+import UserInterface.TravelAgency.ManageMasterFlightScheduleJPanel;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -18,8 +19,7 @@ public class FlightDirectory {
     public static ArrayList<Flight> flightdirectory;
     private Flight flight;
     private AirlinerDirectory airDirectory;
-    ManageMasterFlightScheduleJPanel m;
-    
+        
     public FlightDirectory() {
         flightdirectory = new ArrayList<Flight>();
        // constantFlightSchedule();
