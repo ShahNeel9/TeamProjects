@@ -7,6 +7,7 @@ package UserInterface;
 
 import Buisness.Airliner;
 import Buisness.AirlinerDirectory;
+import Buisness.AirplaneDirectory;
 import Buisness.Customer;
 import Buisness.CustomerDirectory;
 import Buisness.FlightDirectory;
@@ -32,6 +33,8 @@ public class TravelAgencyMain extends javax.swing.JFrame {
     private AirlinerDirectory airdirectory;
     private FlightDirectory flightdirectory;
     private CustomerDirectory customerDirectory;
+    private AirplaneDirectory airplanedirectory;
+    
    // private JPanel CardSequenceJpanel;
     private Seats seat1;
     public TravelAgencyMain() {
@@ -41,6 +44,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
         this.flightdirectory = new FlightDirectory();
         this.customerDirectory=new CustomerDirectory();
         this.seat1=new Seats();
+        this.airplanedirectory = new AirplaneDirectory();
     }
 
     /**
@@ -120,7 +124,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
     private void btnManageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageActionPerformed
         // TODO add your handling code here:
       
-         ManageAirlinersJpanel panel = new ManageAirlinersJpanel(CardSequenceJpanel, airdirectory);
+         ManageAirlinersJpanel panel = new ManageAirlinersJpanel(CardSequenceJpanel, airdirectory,airplanedirectory);
         CardSequenceJpanel.add("ManageAirlinersJpanel",panel);
         
         CardLayout layout = (CardLayout)CardSequenceJpanel.getLayout();

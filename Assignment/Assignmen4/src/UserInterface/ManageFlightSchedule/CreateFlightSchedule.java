@@ -38,12 +38,12 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
     private FlightDirectory flightdirectory;
     private AirplaneDirectory airplanedirectory;
    List<Airplane> list = new ArrayList<Airplane>();
-    public CreateFlightSchedule(JPanel CardSequenceJpanel,AirlinerDirectory airlinerDirectory,FlightDirectory flightdirectory) {
+    public CreateFlightSchedule(JPanel CardSequenceJpanel,AirlinerDirectory airlinerDirectory,FlightDirectory flightdirectory,AirplaneDirectory airplanedirectory) {
         initComponents();
         this.CardSequenceJpanel=CardSequenceJpanel;
         this.airlinerDirectory=airlinerDirectory;
         this.flightdirectory = flightdirectory;
-        this.airplanedirectory = new AirplaneDirectory();
+        this.airplanedirectory = airplanedirectory;
        //  list.add(airplanedirectory.getAirplanedirectory());
         for(Airliner a : this.airlinerDirectory.getAirlinedirectory()){
              //a.getName();
@@ -51,10 +51,10 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
              //modelcombo.addItem(a.getAirplanelist().toString());
         }
         
-      /*  for(Airplane a1 :this.airplanedirectory.getAirplanedirectory()){
+        for(Airplane a1 :airplanedirectory.getAirplanedirectory()){
         
-            airlinecombo.addItem(a1.getModel());
-    }*/
+            modelcombo.addItem(a1.getModel());
+    }
       
     }
 
