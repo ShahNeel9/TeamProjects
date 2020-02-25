@@ -26,10 +26,7 @@ import javax.swing.JPanel;
  */
 public class TravelAgencyMain extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TravelAgencyMain
-     * 
-     */
+   
     private AirlinerDirectory airdirectory;
     private FlightDirectory flightdirectory;
     private CustomerDirectory customerDirectory;
