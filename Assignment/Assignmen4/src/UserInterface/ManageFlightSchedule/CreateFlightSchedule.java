@@ -279,7 +279,7 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
     
         String airliner = airlinecombo.getSelectedItem().toString();
         String Flightnumber = txtFlightNumber.getText();
-       // String model = airlinecombo.getSelectedItem().toString();
+        String model = modelcombo.getSelectedItem().toString();
         String source = txtSource.getText();
         String destination = txtDestination.getText();
       //  double deptime = txtDeparture.getText();
@@ -325,10 +325,10 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
             txtFlightNumber.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             jLabel3.setBackground(Color.BLACK);
         }
-        if((Double.parseDouble(txtDeparture.getText()))<=24 & (Double.parseDouble(txtArrival.getText())<=24))
+        if((Double.parseDouble(txtDeparture.getText()))>=24 && (Double.parseDouble(txtArrival.getText())>=24))
                 {
                 if((Double.parseDouble(txtDeparture.getText())) > (Double.parseDouble(txtArrival.getText()))){
-            JOptionPane.showMessageDialog(null, "Departure time cannot be greater than arrival time");
+                   JOptionPane.showMessageDialog(null, "Departure time cannot be greater than arrival time");
         }
                 }
        /* if(model == null & model == " "){
@@ -465,7 +465,7 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
         Flight f = new Flight();
         f.setAirline(airliner);
         f.setFlightnumber(Flightnumber);
-       // f.setModel(model);
+        f.setModel(model);
         f.setSource(source);
         f.setDestination(destination);
         f.setArrTime(Double.parseDouble(txtArrival.getText()));
@@ -475,6 +475,7 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
         f.setTime(optd);
         f.setPrice(price);
         flightdirectory.addFlight(f);
+        
         
         airlinecombo.setSelectedIndex(0);
         txtFlightNumber.setText("");
