@@ -7,14 +7,19 @@ package UserInterface.ManageFlightSchedule;
 
 import Buisness.Airliner;
 import Buisness.AirlinerDirectory;
+import Buisness.Airplane;
+import Buisness.AirplaneDirectory;
 import Buisness.Flight;
 import Buisness.FlightDirectory;
 import UserInterface.ManageAirliners.ManageAirlinersJpanel;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Component;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -31,18 +36,26 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
    private JPanel CardSequenceJpanel;
     private AirlinerDirectory airlinerDirectory;
     private FlightDirectory flightdirectory;
-   // List<Flight> list;
+    private AirplaneDirectory airplanedirectory;
+   List<Airplane> list = new ArrayList<Airplane>();
     public CreateFlightSchedule(JPanel CardSequenceJpanel,AirlinerDirectory airlinerDirectory,FlightDirectory flightdirectory) {
         initComponents();
         this.CardSequenceJpanel=CardSequenceJpanel;
         this.airlinerDirectory=airlinerDirectory;
         this.flightdirectory = flightdirectory;
-
+        this.airplanedirectory = new AirplaneDirectory();
+       //  list.add(airplanedirectory.getAirplanedirectory());
         for(Airliner a : this.airlinerDirectory.getAirlinedirectory()){
-             a.getName();
+             //a.getName();
              airlinecombo.addItem(a.getName());
+             //modelcombo.addItem(a.getAirplanelist().toString());
         }
         
+      /*  for(Airplane a1 :this.airplanedirectory.getAirplanedirectory()){
+        
+            airlinecombo.addItem(a1.getModel());
+    }*/
+      
     }
 
     /**
@@ -71,7 +84,6 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        txtModel = new javax.swing.JTextField();
         btnCreate = new javax.swing.JButton();
         airlinecombo = new javax.swing.JComboBox<>();
         jXDatePicker = new org.jdesktop.swingx.JXDatePicker();
@@ -79,41 +91,67 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
         jLabel12 = new javax.swing.JLabel();
         txtPrice = new javax.swing.JTextField();
         btnBack = new javax.swing.JButton();
+        modelcombo = new javax.swing.JComboBox<>();
 
-        jLabel1.setText("Create Flight Schedule");
+        setBackground(new java.awt.Color(102, 102, 102));
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("CREATE FLIGHT SCHEDULE");
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Airliner");
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Flight Number");
 
+        txtFlightNumber.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Source");
 
+        txtSource.setBackground(new java.awt.Color(153, 153, 153));
         txtSource.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSourceActionPerformed(evt);
             }
         });
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Destination");
 
+        txtDestination.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Departure Time");
 
+        txtDeparture.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Arrival Time");
 
+        txtArrival.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Duration");
 
+        txtDuration.setBackground(new java.awt.Color(153, 153, 153));
         txtDuration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDurationActionPerformed(evt);
             }
         });
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Date");
 
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Operated Time Of Day");
 
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Model");
 
+        btnCreate.setBackground(new java.awt.Color(153, 153, 153));
         btnCreate.setText("Create");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,6 +161,9 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
 
         airlinecombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select" }));
 
+        jXDatePicker.setBackground(new java.awt.Color(153, 153, 153));
+
+        timecombo.setBackground(new java.awt.Color(153, 153, 153));
         timecombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Morning", "Afternoon", "Evening", "Night" }));
         timecombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,8 +171,12 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
             }
         });
 
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Price");
 
+        txtPrice.setBackground(new java.awt.Color(153, 153, 153));
+
+        btnBack.setBackground(new java.awt.Color(153, 153, 153));
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,17 +184,19 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
             }
         });
 
+        modelcombo.setBackground(new java.awt.Color(153, 153, 153));
+        modelcombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(btnBack)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(273, 273, 273))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnBack)
+                        .addGap(206, 206, 206)
+                        .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(194, 194, 194)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -171,33 +218,30 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
                                     .addComponent(txtSource)
                                     .addComponent(txtFlightNumber)
                                     .addComponent(airlinecombo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jXDatePicker, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jXDatePicker, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE)
                                     .addComponent(txtDuration)
                                     .addComponent(txtDestination)
                                     .addComponent(timecombo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(txtModel, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE)
                                     .addComponent(txtDeparture)
                                     .addComponent(txtArrival)
-                                    .addComponent(txtPrice)))))
+                                    .addComponent(txtPrice)
+                                    .addComponent(modelcombo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(503, 503, 503)
+                        .addGap(350, 350, 350)
                         .addComponent(btnCreate)))
                 .addContainerGap(102, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jLabel1))
-                    .addComponent(btnBack))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
+                        .addComponent(btnBack)
+                        .addGap(52, 52, 52)
                         .addComponent(jLabel2))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(19, 19, 19)
                         .addComponent(airlinecombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -238,12 +282,12 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
                     .addComponent(jLabel12)
                     .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel11)
-                    .addComponent(txtModel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                    .addComponent(modelcombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(42, 42, 42)
                 .addComponent(btnCreate)
-                .addGap(114, 114, 114))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -264,23 +308,32 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
     
         String airliner = airlinecombo.getSelectedItem().toString();
         String Flightnumber = txtFlightNumber.getText();
-        String model = txtModel.getText();
+       // String model = airlinecombo.getSelectedItem().toString();
         String source = txtSource.getText();
         String destination = txtDestination.getText();
-        String deptime = txtDeparture.getText();
-        String Aritime = txtArrival.getText();
+      //  double deptime = txtDeparture.getText();
+       // double Aritime = txtArrival.getText();
         int duration = Integer.parseInt(txtDuration.getText());
         Date date = jXDatePicker.getDate();
         String optd = timecombo.getSelectedItem().toString();
         double price = Double.parseDouble(txtPrice.getText());
         
-        if((airlinecombo.getSelectedIndex()) == '0'){
+        Pattern p1 = Pattern.compile("^[a-zA-Z0-9]+$");
+            Matcher m1 = p1.matcher(Flightnumber); 
+            Pattern p = Pattern.compile("^[a-zA-Z]+$");
+           // Matcher m = p.matcher(source);
+            Matcher m4 = p.matcher(destination);
+           Pattern p2 = Pattern.compile("^[0-9]");
+            //Matcher m2 = p2.matcher(Aritime); 
+            //Matcher m3 = p2.matcher(deptime);
+        if((airlinecombo.getSelectedIndex()) == 0){
             
             airlinecombo.setBorder(BorderFactory.createLineBorder(Color.RED));
             jLabel2.setBackground(Color.RED);
             JOptionPane.showMessageDialog(null, "Select Airliner");
             return;
-        }else{
+        }
+        else{
             airlinecombo.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             jLabel2.setBackground(Color.BLACK);
         }
@@ -291,29 +344,43 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
             jLabel3.setBackground(Color.RED);
             JOptionPane.showMessageDialog(null, "Please Enter Flight Number");
             return;
-        }else{
+        }else if(((m1.matches())==false)){
+           txtFlightNumber.setBorder(BorderFactory.createLineBorder(Color.RED));
+            jLabel3.setBackground(Color.RED);
+            JOptionPane.showMessageDialog(null, "Please Enter valid Flight Number");
+            return; 
+        }
+        else{
             txtFlightNumber.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             jLabel3.setBackground(Color.BLACK);
         }
         
-        if(model == null & model == " "){
+       /* if(model == null & model == " "){
             
             txtModel.setBorder(BorderFactory.createLineBorder(Color.RED));
             jLabel11.setBackground(Color.RED);
             JOptionPane.showMessageDialog(null, "Please enter Model");
             return;
-        }else{
+        }
+        else{
             txtModel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             jLabel11.setBackground(Color.BLACK);
         }
-        
+        */
         if(source == null & source == " "){
             
             txtSource.setBorder(BorderFactory.createLineBorder(Color.RED));
             jLabel4.setBackground(Color.RED);
             JOptionPane.showMessageDialog(null, "Please enter Source");
             return;
-        }else{
+        }/*else if(((m.matches())== false)){
+            txtSource.setBorder(BorderFactory.createLineBorder(Color.RED));
+            jLabel4.setBackground(Color.RED);
+            JOptionPane.showMessageDialog(null, "you can't enter number");
+            return;
+        }*/
+        
+        else{
             txtSource.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             jLabel4.setBackground(Color.BLACK);
         }
@@ -323,28 +390,47 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
             jLabel5.setBackground(Color.RED);
             JOptionPane.showMessageDialog(null, "Please enter Destination");
             return;
-        }else{
-            txtSource.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        }else if(((m4.matches())== false)){
+            txtDestination.setBorder(BorderFactory.createLineBorder(Color.RED));
+            jLabel5.setBackground(Color.RED);
+            JOptionPane.showMessageDialog(null, "you can't enter number");
+            return;
+        }
+        else{
+            txtDestination.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             jLabel5.setBackground(Color.BLACK);
         }
         
-        if(Aritime == null & Aritime == " "){
+        if(txtArrival.getText() == null & txtArrival.getText() == " "){
             
             txtArrival.setBorder(BorderFactory.createLineBorder(Color.RED));
             jLabel7.setBackground(Color.RED);
             JOptionPane.showMessageDialog(null, "Please enter Arrival Time");
             return;
-        }else{
+        }/*else if(((m2.matches())== false)){
+            txtArrival.setBorder(BorderFactory.createLineBorder(Color.RED));
+            jLabel7.setBackground(Color.RED);
+            JOptionPane.showMessageDialog(null, "Time Can't be Number");
+            return;
+        }*/
+        else{
             txtArrival.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             jLabel7.setBackground(Color.BLACK);
         }
-        if(deptime == null & deptime == " "){
+        if(txtDeparture.getText() == null & txtDeparture.getText() == " "){
             
             txtDeparture.setBorder(BorderFactory.createLineBorder(Color.RED));
             jLabel6.setBackground(Color.RED);
             JOptionPane.showMessageDialog(null, "Please enter Departure Time");
             return;
-        }else{
+        }/*else if(((m3.matches())== false))
+        {
+            txtDeparture.setBorder(BorderFactory.createLineBorder(Color.RED));
+            jLabel6.setBackground(Color.RED);
+            JOptionPane.showMessageDialog(null, "Time Can't be Number");
+            return;
+        }*/
+        else{
             txtDeparture.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             jLabel6.setBackground(Color.BLACK);
         }
@@ -359,7 +445,13 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
             timecombo.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             jLabel10.setBackground(Color.BLACK);
         }
-        
+        if(source == destination){
+            txtDestination.setBorder(BorderFactory.createLineBorder(Color.RED));
+            jLabel5.setBackground(Color.RED);
+            txtSource.setBorder(BorderFactory.createLineBorder(Color.RED));
+            jLabel4.setBackground(Color.RED);
+            JOptionPane.showMessageDialog(null, "Source Destination can't be same");
+        }
         try{
            Integer.parseInt(txtDuration.getText());
             txtDuration.setBorder(BorderFactory.createLineBorder(Color.BLACK));
@@ -397,11 +489,11 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
         Flight f = new Flight();
         f.setAirline(airliner);
         f.setFlightnumber(Flightnumber);
-        f.setModel(model);
+       // f.setModel(model);
         f.setSource(source);
         f.setDestination(destination);
-        f.setArrTime(Aritime);
-        f.setDepTime(deptime);
+        f.setArrTime(Double.parseDouble(txtArrival.getText()));
+        f.setDepTime(Double.parseDouble(txtDeparture.getText()));
         f.setDate(date);
         f.setDuration(duration);
         f.setTime(optd);
@@ -410,7 +502,7 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
         
         airlinecombo.setSelectedIndex(0);
         txtFlightNumber.setText("");
-        txtModel.setText("");
+        airlinecombo.setSelectedIndex(0);
         txtSource.setText("");
         txtDestination.setText("");
         txtArrival.setText("");
@@ -455,13 +547,13 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private org.jdesktop.swingx.JXDatePicker jXDatePicker;
+    private javax.swing.JComboBox<String> modelcombo;
     private javax.swing.JComboBox<String> timecombo;
     private javax.swing.JTextField txtArrival;
     private javax.swing.JTextField txtDeparture;
     private javax.swing.JTextField txtDestination;
     private javax.swing.JTextField txtDuration;
     private javax.swing.JTextField txtFlightNumber;
-    private javax.swing.JTextField txtModel;
     private javax.swing.JTextField txtPrice;
     private javax.swing.JTextField txtSource;
     // End of variables declaration//GEN-END:variables

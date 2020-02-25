@@ -26,7 +26,7 @@ public class FlightDirectory {
     
     public FlightDirectory() {
         flightdirectory = new ArrayList<Flight>();
-        constantFlightSchedule();
+       // constantFlightSchedule();
     }
     
     public static ArrayList<Flight> getFlightdirectory() {
@@ -80,7 +80,7 @@ public ArrayList<Flight> searchMaster(String destination, String source, String 
     
     }
 
-public void constantFlightSchedule(){
+/*public void constantFlightSchedule(){
     String[][] arr = {  {"British Airways","ba01","Boston","los angeles","01:30","4:30","100.0","Morning","3"},
                             {"British Airways","ba02","boston","las vegas","01:30","4:30","100.0","Afternoon","3"},
                             {"American Airways","aa01","boston","los angles","01:30","4:30","100.0","Morning","4"},
@@ -107,15 +107,28 @@ public void constantFlightSchedule(){
             temp.setPrice(Double.parseDouble(arr[i][6]));
             temp.setTime(arr[i][7]);
             temp.setDuration(Integer.parseInt(arr[i][8]));
+            //SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+            //Date date = formatter.parse(temp.setDate(arr[i][9]));
+            //temp.setDate(arr[i][9]);
             // setting objects
             Seats seats = new Seats();
             temp.setSeats(seats);
-            
-            
+            SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+            String dateInString = "22/02/2020";
+
+            try {
+
+                Date date = formatter.parse(dateInString);
+                //System.out.println(formatter.format(date));
+                temp.setDate(date);
+            } catch (ParseException e) {
+                e.printStackTrace();
+                JOptionPane.showMessageDialog(null, "Please enter date in dd/mm/yyyy format");
+                return;
+            }
             flightdirectory.add(temp);
-        
+        }
 
     
-}
-}
+}*/
 }

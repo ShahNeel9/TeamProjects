@@ -92,6 +92,9 @@ public class Customer {
         this.Seatnumber = Seatnumber;
     }
     
-    
+    @Override
+    public String toString(){
+        return this.firstName;
+    }
     
 }

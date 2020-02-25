@@ -8,9 +8,12 @@ package UserInterface.TravelAgency;
 import Buisness.Customer;
 import Buisness.CustomerDirectory;
 import Buisness.Flight;
+import Buisness.Seats;
+import UserInterface.Customer.CustomerinformationJpanel;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Component;
+import java.util.List;
 import javax.swing.BorderFactory;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
@@ -27,23 +30,32 @@ public class FlightDetailJPanel extends javax.swing.JPanel {
      */
     private JPanel cardSequenceJPanel;
     private Flight selectedFlight;
+    private Seats seat1;
     
-    public FlightDetailJPanel(JPanel cardSequenceJPanel, Flight selectedFlight) {
+    public FlightDetailJPanel(JPanel cardSequenceJPanel, Flight selectedFlight, Seats seat1) {
         initComponents();
         this.cardSequenceJPanel=cardSequenceJPanel;
         this.selectedFlight= selectedFlight;
+        this.seat1=seat1;
         flightNumbTF.setText(selectedFlight.getFlightnumber());
         priceTF.setText(Double.toString(selectedFlight.getPrice()));
+        
         seatSelection();
     }
     
     public void seatSelection(){
         DefaultComboBoxModel cbm= new DefaultComboBoxModel();
         cbm.addElement("Select Seat");
-        for (int i=0;i< selectedFlight.getSeats().getSeat().size();i++){
-            cbm.addElement(selectedFlight.getSeats().getSeat().get(i));
+        //System.out.println("++++++++++++++++++++++++++++++++++++++@@@@@@@@@@@@@@@@@@@@@@@@@@" + );
+        System.out.println("==================================================================" +seat1);
+        System.out.println("+++++++++++++++++++++++++++++++++++" +seat1.getSeat().size());
+        for (int i=0; i< seat1.getSeat().size();i++){
+            cbm.addElement(seat1.getSeat().get(i));
         }
         seatComboBox.setModel(cbm);
+        
+        //seatComboBox.setModel(new DefaultComboBoxModel<Seats>());
+        
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -74,6 +86,9 @@ public class FlightDetailJPanel extends javax.swing.JPanel {
         bookBtn = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(102, 102, 102));
+
+        backBtn.setBackground(new java.awt.Color(153, 153, 153));
         backBtn.setText("Cancel");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,26 +96,47 @@ public class FlightDetailJPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("FirstName");
 
+        firstNameTF.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("LastName");
 
+        lastNameTF.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Age");
 
+        ageTF.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Phone");
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("SSN");
 
+        phoneTF.setBackground(new java.awt.Color(153, 153, 153));
+
+        ssnTF.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Price");
 
+        priceTF.setBackground(new java.awt.Color(153, 153, 153));
         priceTF.setEnabled(false);
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("FlightNumber");
 
+        flightNumbTF.setBackground(new java.awt.Color(153, 153, 153));
         flightNumbTF.setEnabled(false);
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Seat Choice");
 
+        seatComboBox.setBackground(new java.awt.Color(153, 153, 153));
         seatComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Seat" }));
         seatComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,6 +144,7 @@ public class FlightDetailJPanel extends javax.swing.JPanel {
             }
         });
 
+        bookBtn.setBackground(new java.awt.Color(153, 153, 153));
         bookBtn.setText("Confirm Booking");
         bookBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,8 +152,9 @@ public class FlightDetailJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel9.setText("Booking Page");
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("BOOKING PAGE");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -204,7 +242,7 @@ public class FlightDetailJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bookBtn)
                     .addComponent(backBtn))
-                .addContainerGap(91, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -322,8 +360,13 @@ public class FlightDetailJPanel extends javax.swing.JPanel {
         
 
         // removing seat which has been booked
-        selectedFlight.getSeats().getSeat().remove(seatComboBox.getSelectedItem());
-
+        seat1.getSeat().remove(seatComboBox.getSelectedItem());
+        CustomerinformationJpanel panel = new CustomerinformationJpanel(cardSequenceJPanel, (List<Customer>) seat1);
+        cardSequenceJPanel.add("CustomerinformationJpanel",panel);
+        CardLayout layout = (CardLayout)cardSequenceJPanel.getLayout();
+        layout.next(cardSequenceJPanel);
+        
+/*
         JOptionPane.showMessageDialog(null, "Flight Ticket Booked");
         cardSequenceJPanel.remove(this);
         CardLayout layout = (CardLayout) cardSequenceJPanel.getLayout();
@@ -334,7 +377,7 @@ public class FlightDetailJPanel extends javax.swing.JPanel {
                 mpp.populateTable();
             }
         }
-        layout.previous(cardSequenceJPanel);
+        layout.previous(cardSequenceJPanel);*/
     }//GEN-LAST:event_bookBtnActionPerformed
 
 

@@ -6,6 +6,7 @@
 package UserInterface.TravelAgency;
 
 import Buisness.Flight;
+import Buisness.Seats;
 import java.awt.CardLayout;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -23,11 +24,13 @@ public class FlightFoundJPanel extends javax.swing.JPanel {
      */
     private JPanel cardSequenceJPanel;
     private ArrayList<Flight> flightDirFiltered;
+    private Seats seat1;
     
-    public FlightFoundJPanel(JPanel cardSequenceJPanel, ArrayList<Flight> flightDirFiltered) {
+    public FlightFoundJPanel(JPanel cardSequenceJPanel, ArrayList<Flight> flightDirFiltered, Seats seat1) {
         initComponents();
         this.cardSequenceJPanel=cardSequenceJPanel;
         this.flightDirFiltered=flightDirFiltered;
+        this.seat1=seat1;
         populateTable();
     }
     
@@ -37,7 +40,7 @@ public class FlightFoundJPanel extends javax.swing.JPanel {
         
         for(Flight a :flightDirFiltered){
             Object[] row = new Object[dtm.getColumnCount()];
-            row[0] = a.getAirline();
+            row[0] = a;
             row[1] = a.getFlightnumber();
             row[2] = a.getSource();
             row[3] = a.getDestination();
@@ -64,9 +67,13 @@ public class FlightFoundJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblFlightFound = new javax.swing.JTable();
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Search Results");
+        setBackground(new java.awt.Color(102, 102, 102));
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("SEARCH RESULTS");
+
+        backBtn.setBackground(new java.awt.Color(153, 153, 153));
         backBtn.setText("Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,6 +81,7 @@ public class FlightFoundJPanel extends javax.swing.JPanel {
             }
         });
 
+        viewDetailsBtn.setBackground(new java.awt.Color(153, 153, 153));
         viewDetailsBtn.setText("Book");
         viewDetailsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,7 +114,7 @@ public class FlightFoundJPanel extends javax.swing.JPanel {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 765, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(288, 288, 288)
+                            .addGap(236, 236, 236)
                             .addComponent(jLabel1))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -121,7 +129,7 @@ public class FlightFoundJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(68, 68, 68)
                 .addComponent(viewDetailsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(183, Short.MAX_VALUE))
+                .addContainerGap(185, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -138,7 +146,7 @@ public class FlightFoundJPanel extends javax.swing.JPanel {
         if(selectedRow > -1){
             Flight selectedFlight = flightDirFiltered.get(selectedRow);
             
-            FlightDetailJPanel panel = new FlightDetailJPanel(cardSequenceJPanel, selectedFlight);
+            FlightDetailJPanel panel = new FlightDetailJPanel(cardSequenceJPanel, selectedFlight, seat1);
             cardSequenceJPanel.add("FlightFoundDetailJPanel",panel);
             CardLayout layout = (CardLayout) cardSequenceJPanel.getLayout();
             layout.next(cardSequenceJPanel);

@@ -10,6 +10,8 @@ import Buisness.AirlinerDirectory;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Component;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -71,28 +73,41 @@ public class ViewAirlinerJpanel extends javax.swing.JPanel {
         btnSave = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
-        jLabel1.setText("                                                      View New Airliner");
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("                   VIEW NEW AIRLINER");
+
+        Name.setForeground(new java.awt.Color(255, 255, 255));
         Name.setText("Name");
 
+        txtName.setBackground(new java.awt.Color(153, 153, 153));
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNameActionPerformed(evt);
             }
         });
 
+        Airliner_id.setForeground(new java.awt.Color(255, 255, 255));
         Airliner_id.setText("Airliner_id");
 
+        txtAirid.setBackground(new java.awt.Color(153, 153, 153));
         txtAirid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAiridActionPerformed(evt);
             }
         });
 
+        Numberofflight.setForeground(new java.awt.Color(255, 255, 255));
         Numberofflight.setText("Number of Flight");
 
+        txtNum_f.setBackground(new java.awt.Color(153, 153, 153));
+
+        origincountry.setForeground(new java.awt.Color(255, 255, 255));
         origincountry.setText("Origin Country");
 
+        txtorigin_c.setBackground(new java.awt.Color(153, 153, 153));
         txtorigin_c.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtorigin_cActionPerformed(evt);
@@ -135,29 +150,29 @@ public class ViewAirlinerJpanel extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(150, 150, 150)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Name)
-                            .addComponent(Airliner_id)
-                            .addComponent(Numberofflight)
-                            .addComponent(origincountry))
-                        .addGap(145, 145, 145)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtName, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
-                            .addComponent(txtAirid)
-                            .addComponent(txtNum_f)
-                            .addComponent(txtorigin_c)))
-                    .addComponent(btnBack)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(178, 178, 178)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(49, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Name)
+                                    .addComponent(Airliner_id)
+                                    .addComponent(Numberofflight)
+                                    .addComponent(origincountry))
+                                .addGap(145, 145, 145)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtName, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+                                    .addComponent(txtAirid)
+                                    .addComponent(txtNum_f)
+                                    .addComponent(txtorigin_c)))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(btnBack))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(btnBack)
-                .addGap(16, 16, 16)
+                .addGap(13, 13, 13)
                 .addComponent(jLabel1)
-                .addGap(43, 43, 43)
+                .addGap(46, 46, 46)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Name))
@@ -193,7 +208,7 @@ public class ViewAirlinerJpanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 574, Short.MAX_VALUE)
+            .addGap(0, 582, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -223,13 +238,24 @@ public class ViewAirlinerJpanel extends javax.swing.JPanel {
        // int num_op = Integer.parseInt(txtC_operated.getText());
         //int num_flight = Integer.parseInt(txtNum_flight.getText());
         
+        Pattern p = Pattern.compile(" ^[a-zA-Z]+$");
+            Matcher m = p.matcher(name);
+            Matcher m2 = p.matcher(origin_c);
+           Pattern p1 = Pattern.compile("^[a-zA-Z0-9]+$");
+            Matcher m1 = p1.matcher(air_id); 
         if(name == null & name == " "){
             
             txtName.setBorder(BorderFactory.createLineBorder(Color.RED));
             Name.setBackground(Color.RED);
             JOptionPane.showMessageDialog(null, "Please enter Name");
             return;
-        }else{
+        }/*else if(((m.matches())==false)){
+            txtName.setBorder(BorderFactory.createLineBorder(Color.RED));
+            Name.setBackground(Color.RED);
+            JOptionPane.showMessageDialog(null, "Please enter valid Name");
+            return;
+        }*/
+        else{
             txtName.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             Name.setBackground(Color.BLACK);
         }
@@ -240,7 +266,14 @@ public class ViewAirlinerJpanel extends javax.swing.JPanel {
             Airliner_id.setBackground(Color.RED);
             JOptionPane.showMessageDialog(null, "Please enter Airliner_id");
             return;
-        }else{
+        }else if(((m1.matches())==false)){
+            
+            txtAirid.setBorder(BorderFactory.createLineBorder(Color.RED));
+            Airliner_id.setBackground(Color.RED);
+            JOptionPane.showMessageDialog(null, "Please valid enter Airliner_id");
+            return;
+        }
+        else{
             txtAirid.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             Airliner_id.setBackground(Color.BLACK);
         }
@@ -251,7 +284,13 @@ public class ViewAirlinerJpanel extends javax.swing.JPanel {
             origincountry.setBackground(Color.RED);
             JOptionPane.showMessageDialog(null, "Please enter Origin Country");
             return;
-        }else{
+        }else if(((m2.matches())==false)){
+             txtorigin_c.setBorder(BorderFactory.createLineBorder(Color.RED));
+            origincountry.setBackground(Color.RED);
+            JOptionPane.showMessageDialog(null, "Please enter Valid Origin Country");
+            return;
+        }
+        else{
             txtorigin_c.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             origincountry.setBackground(Color.BLACK);
         }

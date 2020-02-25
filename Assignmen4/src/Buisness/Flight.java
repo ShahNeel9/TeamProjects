@@ -17,8 +17,10 @@ public class Flight {
     private String flightnumber;
     private String source;
     private String destination;
-    private String depTime;
-    private String arrTime;
+    private double depTime;
+    private double arrTime;
+   // private String depTime;
+    //private String arrTime;
     private Date date;
     private String Time;
     private int duration;
@@ -35,6 +37,22 @@ public class Flight {
     }
     public String getModel() {
         return Model;
+    }
+
+    public double getDepTime() {
+        return depTime;
+    }
+
+    public void setDepTime(double depTime) {
+        this.depTime = depTime;
+    }
+
+    public double getArrTime() {
+        return arrTime;
+    }
+
+    public void setArrTime(double arrTime) {
+        this.arrTime = arrTime;
     }
 
     public void setModel(String Model) {
@@ -71,7 +89,7 @@ public class Flight {
     public void setDestination(String destination) {
         this.destination = destination;
     }
-
+/*
     public String getDepTime() {
         return depTime;
     }
@@ -87,7 +105,7 @@ public class Flight {
     public void setArrTime(String arrTime) {
         this.arrTime = arrTime;
     }
-
+*/
     public Date getDate() {
         return date;
     }
@@ -120,5 +138,8 @@ public class Flight {
         this.price = price;
     }
     
-    
+    @Override
+    public String toString(){
+        return this.airline;
+    }
 }

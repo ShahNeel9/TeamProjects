@@ -7,6 +7,7 @@ package UserInterface.ManageFlightSchedule;
 
 import Buisness.Airliner;
 import Buisness.AirlinerDirectory;
+import Buisness.AirplaneDirectory;
 import Buisness.Flight;
 import Buisness.FlightDirectory;
 import UserInterface.ManageAirliners.ManageAirlinersJpanel;
@@ -28,13 +29,14 @@ public class ManageFlightSchedule extends javax.swing.JPanel {
     private JPanel CardSequenceJpanel;
     private AirlinerDirectory airlinerdirectory;
     private FlightDirectory flightdirectory;
-    
+    private AirplaneDirectory airplanedirectory;
     
     public ManageFlightSchedule(JPanel CardSequenceJpanel, AirlinerDirectory airlinerdirectory,FlightDirectory flightdirectory) {
         initComponents();
         this.CardSequenceJpanel=CardSequenceJpanel;
         this.airlinerdirectory=airlinerdirectory;
         this.flightdirectory = flightdirectory;
+       // this.airplanedirectory = airplanedirectory;
         PopulateTable();
         
     }
@@ -46,9 +48,9 @@ public class ManageFlightSchedule extends javax.swing.JPanel {
         
          for(Flight a : flightdirectory.getFlightdirectory()){
             Object[] row = new Object[dtm.getColumnCount()];
-            row[0]= a.getAirline();
+            row[0]= a;
             row[1]= a.getFlightnumber();
-            row[2]= a.getModel();
+            row[2]= "qqq";
             row[3] = a.getSource();
             row[4] = a.getDestination();
             row[5] = a.getDepTime();
@@ -77,8 +79,13 @@ public class ManageFlightSchedule extends javax.swing.JPanel {
         btnView = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
 
-        jLabel1.setText("Flight Schedule");
+        setBackground(new java.awt.Color(102, 102, 102));
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("FLIGHT SCHEDULE");
+
+        tblFlight.setBackground(new java.awt.Color(153, 153, 153));
         tblFlight.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null},
@@ -92,6 +99,7 @@ public class ManageFlightSchedule extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblFlight);
 
+        btnCreate.setBackground(new java.awt.Color(153, 153, 153));
         btnCreate.setText("Create Flight");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,6 +107,7 @@ public class ManageFlightSchedule extends javax.swing.JPanel {
             }
         });
 
+        btnView.setBackground(new java.awt.Color(153, 153, 153));
         btnView.setText("View Flight");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,6 +115,7 @@ public class ManageFlightSchedule extends javax.swing.JPanel {
             }
         });
 
+        btnDelete.setBackground(new java.awt.Color(153, 153, 153));
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,35 +128,35 @@ public class ManageFlightSchedule extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(363, 363, 363)
-                .addComponent(jLabel1)
-                .addContainerGap(376, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnCreate, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnView, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnDelete, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 816, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(304, 304, 304)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCreate))
+                .addGap(192, 192, 192))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
+                .addGap(48, 48, 48)
                 .addComponent(jLabel1)
-                .addGap(36, 36, 36)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(86, 86, 86)
+                .addGap(61, 61, 61)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(81, 81, 81)
                 .addComponent(btnCreate)
-                .addGap(26, 26, 26)
+                .addGap(33, 33, 33)
                 .addComponent(btnView)
-                .addGap(30, 30, 30)
+                .addGap(37, 37, 37)
                 .addComponent(btnDelete)
-                .addContainerGap(235, Short.MAX_VALUE))
+                .addContainerGap(225, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

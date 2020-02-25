@@ -10,6 +10,7 @@ import Buisness.AirlinerDirectory;
 import Buisness.Customer;
 import Buisness.CustomerDirectory;
 import Buisness.FlightDirectory;
+import Buisness.Seats;
 import UserInterface.Customer.CustomerinformationJpanel;
 import UserInterface.ManageAirliners.CreateNewAirlinerJpanel;
 import UserInterface.ManageAirliners.ManageAirlinersJpanel;
@@ -32,12 +33,14 @@ public class TravelAgencyMain extends javax.swing.JFrame {
     private FlightDirectory flightdirectory;
     private CustomerDirectory customerDirectory;
    // private JPanel CardSequenceJpanel;
+    private Seats seat1;
     public TravelAgencyMain() {
  
         initComponents();
         this.airdirectory= new AirlinerDirectory();
         this.flightdirectory = new FlightDirectory();
         this.customerDirectory=new CustomerDirectory();
+        this.seat1=new Seats();
     }
 
     /**
@@ -58,7 +61,6 @@ public class TravelAgencyMain extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 102, 102));
-        setForeground(new java.awt.Color(102, 102, 102));
 
         manageJpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jSplitPane2.setLeftComponent(manageJpanel);
@@ -67,6 +69,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
         CardSequenceJpanel.setLayout(new java.awt.CardLayout());
         jSplitPane2.setRightComponent(CardSequenceJpanel);
 
+        btnManage.setBackground(new java.awt.Color(153, 153, 153));
         btnManage.setText("Manage Airline");
         btnManage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,6 +77,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
             }
         });
 
+        btntravelagency.setBackground(new java.awt.Color(153, 153, 153));
         btntravelagency.setText("Travel Agency");
         btntravelagency.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,6 +85,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
             }
         });
 
+        btnCustomer.setBackground(new java.awt.Color(153, 153, 153));
         btnCustomer.setText("Customer");
         btnCustomer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,22 +100,22 @@ public class TravelAgencyMain extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btntravelagency, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 418, Short.MAX_VALUE)
-                    .addComponent(btnManage, javax.swing.GroupLayout.DEFAULT_SIZE, 418, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addComponent(jSplitPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1484, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btntravelagency, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                    .addComponent(btnManage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSplitPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1007, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSplitPane2, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(351, Short.MAX_VALUE)
+                .addGap(60, 60, 60)
                 .addComponent(btnManage)
-                .addGap(109, 109, 109)
+                .addGap(29, 29, 29)
                 .addComponent(btntravelagency)
-                .addGap(104, 104, 104)
+                .addGap(27, 27, 27)
                 .addComponent(btnCustomer)
-                .addGap(429, 429, 429))
+                .addContainerGap(395, Short.MAX_VALUE))
         );
 
         pack();
@@ -121,6 +126,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
       
          ManageAirlinersJpanel panel = new ManageAirlinersJpanel(CardSequenceJpanel, airdirectory);
         CardSequenceJpanel.add("ManageAirlinersJpanel",panel);
+        
         CardLayout layout = (CardLayout)CardSequenceJpanel.getLayout();
         layout.next(CardSequenceJpanel);
         
@@ -142,7 +148,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
     private void btntravelagencyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntravelagencyActionPerformed
         // TODO add your handling code here:
         CardLayout layout = (CardLayout)CardSequenceJpanel.getLayout();
-        CardSequenceJpanel.add(new ManageMasterFlightScheduleJPanel(CardSequenceJpanel,flightdirectory));
+        CardSequenceJpanel.add(new ManageMasterFlightScheduleJPanel(CardSequenceJpanel,flightdirectory,seat1));
         layout.next(CardSequenceJpanel);
     }//GEN-LAST:event_btntravelagencyActionPerformed
 
@@ -171,6 +177,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(TravelAgencyMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
