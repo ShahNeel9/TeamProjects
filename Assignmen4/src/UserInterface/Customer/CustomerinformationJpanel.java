@@ -65,7 +65,10 @@ public class CustomerinformationJpanel extends javax.swing.JPanel {
         customerTbl = new javax.swing.JTable();
         viewBookingInfoBtn = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(102, 102, 102));
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Customers");
 
         customerTbl.setModel(new javax.swing.table.DefaultTableModel(

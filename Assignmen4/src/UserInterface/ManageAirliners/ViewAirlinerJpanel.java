@@ -73,8 +73,13 @@ public class ViewAirlinerJpanel extends javax.swing.JPanel {
         btnSave = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("                                                      View New Airliner");
 
+        Name.setForeground(new java.awt.Color(255, 255, 255));
         Name.setText("Name");
 
         txtName.addActionListener(new java.awt.event.ActionListener() {
@@ -83,6 +88,7 @@ public class ViewAirlinerJpanel extends javax.swing.JPanel {
             }
         });
 
+        Airliner_id.setForeground(new java.awt.Color(255, 255, 255));
         Airliner_id.setText("Airliner_id");
 
         txtAirid.addActionListener(new java.awt.event.ActionListener() {
@@ -91,8 +97,10 @@ public class ViewAirlinerJpanel extends javax.swing.JPanel {
             }
         });
 
+        Numberofflight.setForeground(new java.awt.Color(255, 255, 255));
         Numberofflight.setText("Number of Flight");
 
+        origincountry.setForeground(new java.awt.Color(255, 255, 255));
         origincountry.setText("Origin Country");
 
         txtorigin_c.addActionListener(new java.awt.event.ActionListener() {

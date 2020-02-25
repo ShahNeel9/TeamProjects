@@ -67,7 +67,10 @@ public class FlightFoundJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblFlightFound = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(102, 102, 102));
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Search Results");
 
         backBtn.setText("Back");

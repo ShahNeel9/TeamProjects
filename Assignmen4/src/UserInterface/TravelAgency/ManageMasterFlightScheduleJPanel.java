@@ -82,7 +82,10 @@ public class ManageMasterFlightScheduleJPanel extends javax.swing.JPanel {
         searchBtn = new javax.swing.JButton();
         jXDatePicker = new org.jdesktop.swingx.JXDatePicker();
 
+        setBackground(new java.awt.Color(102, 102, 102));
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("MASTER FLIGHT INFORMATION");
 
         tblMasterFlight.setModel(new javax.swing.table.DefaultTableModel(
@@ -98,6 +101,7 @@ public class ManageMasterFlightScheduleJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblMasterFlight);
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Destination");
 
         destinationTxtField.addActionListener(new java.awt.event.ActionListener() {
@@ -106,8 +110,10 @@ public class ManageMasterFlightScheduleJPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Source");
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Preferred time of Day");
 
         otodComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Option", "Morning", "Afternoon", "Evening", "Night" }));
@@ -117,6 +123,7 @@ public class ManageMasterFlightScheduleJPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Date (dd-mm-yyyy)");
 
         searchBtn.setText("Search");

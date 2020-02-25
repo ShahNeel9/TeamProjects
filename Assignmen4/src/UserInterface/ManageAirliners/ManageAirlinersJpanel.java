@@ -103,8 +103,10 @@ public class ManageAirlinersJpanel extends javax.swing.JPanel {
         btnManageFlight = new javax.swing.JButton();
         btnAirplane = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(102, 102, 102));
         setPreferredSize(new java.awt.Dimension(946, 775));
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Manage Airliner");
 
         btnsearch.setText("Search");

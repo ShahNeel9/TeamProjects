@@ -79,6 +79,9 @@ public class ManageFlightSchedule extends javax.swing.JPanel {
         btnView = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(102, 102, 102));
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Flight Schedule");
 
         tblFlight.setModel(new javax.swing.table.DefaultTableModel(

@@ -65,6 +65,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
         manageJpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jSplitPane2.setLeftComponent(manageJpanel);
 
+        CardSequenceJpanel.setBackground(new java.awt.Color(102, 102, 102));
         CardSequenceJpanel.setLayout(new java.awt.CardLayout());
         jSplitPane2.setRightComponent(CardSequenceJpanel);
 

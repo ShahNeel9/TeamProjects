@@ -103,7 +103,10 @@ public class viewbookinginformationJpanel extends javax.swing.JPanel {
         jLabel12 = new javax.swing.JLabel();
         txtPrice = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(102, 102, 102));
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Booking Information");
 
         backBtn.setText("Back");
@@ -113,12 +116,16 @@ public class viewbookinginformationJpanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Airliner");
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Flight Number");
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Source");
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Destination");
 
         destinationTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -127,18 +134,25 @@ public class viewbookinginformationJpanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Departure Time");
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Arrival Time");
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Duration");
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Operated Time Of Day");
 
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Seat");
 
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Date");
 
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("price");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

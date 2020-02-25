@@ -62,14 +62,21 @@ public class addAirplaneJpanel extends javax.swing.JPanel {
         btnAdd = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Add Airplane");
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Airliner");
 
         aircombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select" }));
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("model");
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("seats");
 
         txtseat.addActionListener(new java.awt.event.ActionListener() {
@@ -111,10 +118,10 @@ public class addAirplaneJpanel extends javax.swing.JPanel {
                                 .addComponent(btnBack)))
                         .addGap(97, 97, 97)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel1)
                             .addComponent(aircombo, 0, 168, Short.MAX_VALUE)
                             .addComponent(txtmodel)
-                            .addComponent(txtseat)))
+                            .addComponent(txtseat)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(286, 286, 286)
                         .addComponent(btnAdd)))

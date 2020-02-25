@@ -71,8 +71,13 @@ public class CreateNewAirlinerJpanel extends javax.swing.JPanel {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
+        setBackground(new java.awt.Color(102, 102, 102));
+        setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("                                                      Create New Airliner");
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Name");
 
         txtName.addActionListener(new java.awt.event.ActionListener() {
@@ -81,6 +86,7 @@ public class CreateNewAirlinerJpanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Airliner_id");
 
         txtAirid.addActionListener(new java.awt.event.ActionListener() {
@@ -89,8 +95,10 @@ public class CreateNewAirlinerJpanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Fleet Size");
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Origin Country");
 
         txtorigin.addActionListener(new java.awt.event.ActionListener() {

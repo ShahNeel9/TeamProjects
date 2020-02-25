@@ -93,12 +93,18 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         modelcombo = new javax.swing.JComboBox<>();
 
+        setBackground(new java.awt.Color(102, 102, 102));
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Create Flight Schedule");
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Airliner");
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Flight Number");
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Source");
 
         txtSource.addActionListener(new java.awt.event.ActionListener() {
@@ -107,12 +113,16 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
             }
         });
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Destination");
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Departure Time");
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Arrival Time");
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Duration");
 
         txtDuration.addActionListener(new java.awt.event.ActionListener() {
@@ -121,10 +131,13 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
             }
         });
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Date");
 
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Operated Time Of Day");
 
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Model");
 
         btnCreate.setText("Create");
@@ -143,6 +156,7 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
             }
         });
 
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Price");
 
         btnBack.setText("Back");
