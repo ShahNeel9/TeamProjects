@@ -64,6 +64,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
         btnCustomer = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(102, 102, 102));
 
         manageJpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jSplitPane2.setLeftComponent(manageJpanel);
@@ -71,6 +72,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
         CardSequenceJpanel.setLayout(new java.awt.CardLayout());
         jSplitPane2.setRightComponent(CardSequenceJpanel);
 
+        btnManage.setBackground(new java.awt.Color(153, 153, 153));
         btnManage.setText("Manage Airline");
         btnManage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,6 +80,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
             }
         });
 
+        btntravelagency.setBackground(new java.awt.Color(153, 153, 153));
         btntravelagency.setText("Travel Agency");
         btntravelagency.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,6 +88,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
             }
         });
 
+        btnCustomer.setBackground(new java.awt.Color(153, 153, 153));
         btnCustomer.setText("Customer");
         btnCustomer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,21 +103,21 @@ public class TravelAgencyMain extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btntravelagency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnManage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btntravelagency, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                    .addComponent(btnManage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSplitPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 953, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jSplitPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1007, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSplitPane2, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addGap(60, 60, 60)
                 .addComponent(btnManage)
-                .addGap(27, 27, 27)
+                .addGap(29, 29, 29)
                 .addComponent(btntravelagency)
-                .addGap(28, 28, 28)
+                .addGap(27, 27, 27)
                 .addComponent(btnCustomer)
                 .addContainerGap(395, Short.MAX_VALUE))
         );

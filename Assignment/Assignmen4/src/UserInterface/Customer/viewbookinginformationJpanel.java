@@ -103,8 +103,12 @@ public class viewbookinginformationJpanel extends javax.swing.JPanel {
         jLabel12 = new javax.swing.JLabel();
         txtPrice = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(102, 102, 102));
+        setForeground(new java.awt.Color(255, 255, 255));
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Booking Information");
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("BOOKING INFORMATION");
 
         backBtn.setText("Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -115,12 +119,22 @@ public class viewbookinginformationJpanel extends javax.swing.JPanel {
 
         jLabel2.setText("Airliner");
 
+        airlinerTextField.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Flight Number");
 
+        flightNumTextField.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Source");
 
+        sourceTextField.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Destination");
 
+        destinationTextField.setBackground(new java.awt.Color(153, 153, 153));
         destinationTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 destinationTextFieldActionPerformed(evt);
@@ -129,17 +143,37 @@ public class viewbookinginformationJpanel extends javax.swing.JPanel {
 
         jLabel6.setText("Departure Time");
 
+        depTimeTextField.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Arrival Time");
 
+        arrTimeTextField.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Duration");
 
+        durationTextField.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Operated Time Of Day");
 
+        todTextField.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Seat");
 
+        seatTextField.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Date");
 
+        timeTextField.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("price");
+
+        txtPrice.setBackground(new java.awt.Color(153, 153, 153));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -147,51 +181,50 @@ public class viewbookinginformationJpanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(129, 129, 129)
+                .addComponent(jLabel1)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
+                .addGap(180, 180, 180)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(296, 296, 296)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(180, 180, 180)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel11)
-                            .addComponent(jLabel12))
-                        .addGap(118, 118, 118)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(airlinerTextField)
-                            .addComponent(flightNumTextField)
-                            .addComponent(sourceTextField)
-                            .addComponent(destinationTextField)
-                            .addComponent(depTimeTextField)
-                            .addComponent(arrTimeTextField)
-                            .addComponent(durationTextField)
-                            .addComponent(todTextField)
-                            .addComponent(seatTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
-                            .addComponent(timeTextField)
-                            .addComponent(txtPrice))))
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel12))
+                .addGap(118, 118, 118)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(airlinerTextField)
+                    .addComponent(flightNumTextField)
+                    .addComponent(sourceTextField)
+                    .addComponent(destinationTextField)
+                    .addComponent(depTimeTextField)
+                    .addComponent(arrTimeTextField)
+                    .addComponent(durationTextField)
+                    .addComponent(todTextField)
+                    .addComponent(seatTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+                    .addComponent(timeTextField)
+                    .addComponent(txtPrice))
                 .addContainerGap(65, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(durationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(durationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(backBtn)
-                        .addGap(3, 3, 3)
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
+                        .addGap(50, 50, 50)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addComponent(airlinerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))

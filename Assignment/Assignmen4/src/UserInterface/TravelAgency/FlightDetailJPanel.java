@@ -86,6 +86,9 @@ public class FlightDetailJPanel extends javax.swing.JPanel {
         bookBtn = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(102, 102, 102));
+
+        backBtn.setBackground(new java.awt.Color(153, 153, 153));
         backBtn.setText("Cancel");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,26 +96,47 @@ public class FlightDetailJPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("FirstName");
 
+        firstNameTF.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("LastName");
 
+        lastNameTF.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Age");
 
+        ageTF.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Phone");
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("SSN");
 
+        phoneTF.setBackground(new java.awt.Color(153, 153, 153));
+
+        ssnTF.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Price");
 
+        priceTF.setBackground(new java.awt.Color(153, 153, 153));
         priceTF.setEnabled(false);
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("FlightNumber");
 
+        flightNumbTF.setBackground(new java.awt.Color(153, 153, 153));
         flightNumbTF.setEnabled(false);
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Seat Choice");
 
+        seatComboBox.setBackground(new java.awt.Color(153, 153, 153));
         seatComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Seat" }));
         seatComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,6 +144,7 @@ public class FlightDetailJPanel extends javax.swing.JPanel {
             }
         });
 
+        bookBtn.setBackground(new java.awt.Color(153, 153, 153));
         bookBtn.setText("Confirm Booking");
         bookBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,8 +152,9 @@ public class FlightDetailJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel9.setText("Booking Page");
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("BOOKING PAGE");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -216,7 +242,7 @@ public class FlightDetailJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bookBtn)
                     .addComponent(backBtn))
-                .addContainerGap(91, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

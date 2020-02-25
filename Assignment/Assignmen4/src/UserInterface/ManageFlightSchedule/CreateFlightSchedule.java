@@ -38,7 +38,7 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
     private FlightDirectory flightdirectory;
     private AirplaneDirectory airplanedirectory;
    List<Airplane> list = new ArrayList<Airplane>();
-    public CreateFlightSchedule(JPanel CardSequenceJpanel,AirlinerDirectory airlinerDirectory,FlightDirectory flightdirectory,AirplaneDirectory airplanedirectory) {
+    public CreateFlightSchedule(JPanel CardSequenceJpanel,AirlinerDirectory airlinerDirectory,FlightDirectory flightdirectory) {
         initComponents();
         this.CardSequenceJpanel=CardSequenceJpanel;
         this.airlinerDirectory=airlinerDirectory;
@@ -93,40 +93,65 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         modelcombo = new javax.swing.JComboBox<>();
 
-        jLabel1.setText("Create Flight Schedule");
+        setBackground(new java.awt.Color(102, 102, 102));
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("CREATE FLIGHT SCHEDULE");
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Airliner");
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Flight Number");
 
+        txtFlightNumber.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Source");
 
+        txtSource.setBackground(new java.awt.Color(153, 153, 153));
         txtSource.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSourceActionPerformed(evt);
             }
         });
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Destination");
 
+        txtDestination.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Departure Time");
 
+        txtDeparture.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Arrival Time");
 
+        txtArrival.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Duration");
 
+        txtDuration.setBackground(new java.awt.Color(153, 153, 153));
         txtDuration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDurationActionPerformed(evt);
             }
         });
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Date");
 
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Operated Time Of Day");
 
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Model");
 
+        btnCreate.setBackground(new java.awt.Color(153, 153, 153));
         btnCreate.setText("Create");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,6 +161,9 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
 
         airlinecombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select" }));
 
+        jXDatePicker.setBackground(new java.awt.Color(153, 153, 153));
+
+        timecombo.setBackground(new java.awt.Color(153, 153, 153));
         timecombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Morning", "Afternoon", "Evening", "Night" }));
         timecombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,8 +171,12 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
             }
         });
 
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Price");
 
+        txtPrice.setBackground(new java.awt.Color(153, 153, 153));
+
+        btnBack.setBackground(new java.awt.Color(153, 153, 153));
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,13 +190,12 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(btnBack)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(273, 273, 273))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnBack)
+                        .addGap(206, 206, 206)
+                        .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(194, 194, 194)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -195,24 +226,21 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
                                     .addComponent(txtPrice)
                                     .addComponent(modelcombo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(503, 503, 503)
+                        .addGap(350, 350, 350)
                         .addComponent(btnCreate)))
                 .addContainerGap(102, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jLabel1))
-                    .addComponent(btnBack))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
+                        .addComponent(btnBack)
+                        .addGap(52, 52, 52)
                         .addComponent(jLabel2))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(19, 19, 19)
                         .addComponent(airlinecombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -256,9 +284,9 @@ public class CreateFlightSchedule extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel11)
                     .addComponent(modelcombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addGap(42, 42, 42)
                 .addComponent(btnCreate)
-                .addGap(114, 114, 114))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
