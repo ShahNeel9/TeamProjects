@@ -58,15 +58,12 @@ public class MainJFrame extends javax.swing.JFrame {
         btnLogin = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
         txtPassword = new javax.swing.JPasswordField();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         container = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1200, 700));
-        setPreferredSize(new java.awt.Dimension(1200, 700));
 
         jSplitPane2.setMinimumSize(new java.awt.Dimension(1200, 700));
         jSplitPane2.setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -115,14 +112,6 @@ public class MainJFrame extends javax.swing.JFrame {
         txtPassword.setForeground(new java.awt.Color(0, 0, 102));
         txtPassword.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel3.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 140, 25));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-google-home-48.png"))); // NOI18N
-        jLabel4.setText("jLabel4");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 10, 48, -1));
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jLabel6.setText("SIGN IN");
-        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 99, -1, -1));
 
         jSplitPane2.setLeftComponent(jPanel3);
 
@@ -276,8 +265,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel container;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
