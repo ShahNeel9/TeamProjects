@@ -158,7 +158,7 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
         jLabel13 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(204, 204, 204));
         setPreferredSize(new java.awt.Dimension(1000, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -200,6 +200,7 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 497, -1, -1));
 
         SickCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select" }));
+        SickCombo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         SickCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SickComboActionPerformed(evt);
@@ -208,6 +209,7 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
         add(SickCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 360, 133, -1));
 
         TissueCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select" }));
+        TissueCombo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         TissueCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TissueComboActionPerformed(evt);
@@ -216,6 +218,7 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
         add(TissueCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 418, 133, -1));
 
         bloodCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select" }));
+        bloodCombo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         bloodCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bloodComboActionPerformed(evt);
@@ -224,6 +227,7 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
         add(bloodCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 311, 133, -1));
 
         OrganCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select" }));
+        OrganCombo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         OrganCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 OrganComboActionPerformed(evt);
@@ -232,6 +236,7 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
         add(OrganCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 462, 133, -1));
 
         btnSubmit.setText("Submit");
+        btnSubmit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
@@ -240,6 +245,7 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
         add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(319, 581, 118, -1));
 
         btnBack.setText("<<Back");
+        btnBack.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -285,8 +291,6 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
         );
 
         add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 47, 396, -1));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Image\\1.gif")); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 

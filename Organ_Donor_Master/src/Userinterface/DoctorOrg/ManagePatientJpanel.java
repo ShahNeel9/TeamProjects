@@ -69,7 +69,7 @@ public class ManagePatientJpanel extends javax.swing.JPanel {
         jLabel12 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(204, 204, 204));
         setPreferredSize(new java.awt.Dimension(1000, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -94,9 +94,10 @@ public class ManagePatientJpanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(patientJtable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 222, 866, 215));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 222, 866, 120));
 
         btnDelete.setText("Delete Patient Detail");
+        btnDelete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteActionPerformed(evt);
@@ -105,6 +106,7 @@ public class ManagePatientJpanel extends javax.swing.JPanel {
         add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(756, 471, -1, -1));
 
         btnView.setText("View Patient Detail");
+        btnView.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewActionPerformed(evt);
@@ -113,6 +115,7 @@ public class ManagePatientJpanel extends javax.swing.JPanel {
         add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(404, 471, 186, -1));
 
         btnAdd.setText("Add Patient Detail");
+        btnAdd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
@@ -121,6 +124,7 @@ public class ManagePatientJpanel extends javax.swing.JPanel {
         add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 471, 194, -1));
 
         btnBack.setText("<<Back");
+        btnBack.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);

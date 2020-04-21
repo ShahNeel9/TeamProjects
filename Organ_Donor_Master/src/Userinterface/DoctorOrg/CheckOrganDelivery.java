@@ -69,7 +69,7 @@ public class CheckOrganDelivery extends javax.swing.JPanel {
         jLabel11 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(204, 204, 204));
         setPreferredSize(new java.awt.Dimension(1000, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -94,10 +94,13 @@ public class CheckOrganDelivery extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(informJtable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 147, 690, 192));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 147, 690, 120));
+
+        txtRes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         add(txtRes, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 358, 194, -1));
 
         jButton1.setText("Complete");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -108,7 +111,7 @@ public class CheckOrganDelivery extends javax.swing.JPanel {
         jPanel4.setBackground(new java.awt.Color(15, 58, 59));
         jPanel4.setPreferredSize(new java.awt.Dimension(1000, 40));
 
-        jLabel10.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Organ Delivery Status");
 
@@ -130,7 +133,7 @@ public class CheckOrganDelivery extends javax.swing.JPanel {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addComponent(jLabel11)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel4Layout.createSequentialGroup()
                     .addGap(10, 10, 10)

@@ -108,7 +108,7 @@ public class ManageOrganReport extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(204, 204, 204));
         setMinimumSize(new java.awt.Dimension(1000, 700));
         setPreferredSize(new java.awt.Dimension(1000, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -134,9 +134,10 @@ public class ManageOrganReport extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(organRequestJtable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 833, 124));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 833, 110));
 
         btnBack.setText("Back");
+        btnBack.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -145,6 +146,7 @@ public class ManageOrganReport extends javax.swing.JPanel {
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 103, -1));
 
         btnAssign.setText("Assign To Me");
+        btnAssign.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnAssign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAssignActionPerformed(evt);
@@ -173,15 +175,18 @@ public class ManageOrganReport extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(reportJtable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 833, 164));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 833, 110));
 
         btnApprove.setText("Send For Approval");
+        btnApprove.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnApprove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnApproveActionPerformed(evt);
             }
         });
         add(btnApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 560, 195, -1));
+
+        txtApprove.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         add(txtApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 560, 234, -1));
 
         jPanel1.setBackground(new java.awt.Color(15, 58, 59));
@@ -190,8 +195,6 @@ public class ManageOrganReport extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Approved Organ Request");
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Icons\\icons8-template.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -221,8 +224,6 @@ public class ManageOrganReport extends javax.swing.JPanel {
         jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("My Report Table");
-
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Icons\\icons8-template.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

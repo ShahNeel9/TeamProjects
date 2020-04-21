@@ -101,7 +101,7 @@ public class CreateOrganRequestJpanel extends javax.swing.JPanel {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(204, 204, 204));
 
         patientJtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -125,6 +125,7 @@ public class CreateOrganRequestJpanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(patientJtable);
 
         btnCreate.setText("Create Organ Request");
+        btnCreate.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateActionPerformed(evt);
@@ -132,6 +133,7 @@ public class CreateOrganRequestJpanel extends javax.swing.JPanel {
         });
 
         btnBack.setText("Back");
+        btnBack.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -159,6 +161,7 @@ public class CreateOrganRequestJpanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(ProcessRequestJtable);
 
+        txtStatus.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         txtStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtStatusActionPerformed(evt);
@@ -166,6 +169,7 @@ public class CreateOrganRequestJpanel extends javax.swing.JPanel {
         });
 
         btndelete.setText("Delete ");
+        btndelete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btndelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btndeleteActionPerformed(evt);
@@ -173,6 +177,7 @@ public class CreateOrganRequestJpanel extends javax.swing.JPanel {
         });
 
         btnDelete.setText("Delete");
+        btnDelete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteActionPerformed(evt);
@@ -263,7 +268,7 @@ public class CreateOrganRequestJpanel extends javax.swing.JPanel {
                         .addGap(37, 37, 37)
                         .addComponent(btnCreate)
                         .addGap(83, 83, 83)
-                        .addComponent(btndelete, javax.swing.GroupLayout.DEFAULT_SIZE, 383, Short.MAX_VALUE)
+                        .addComponent(btndelete, javax.swing.GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE)
                         .addGap(31, 31, 31))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

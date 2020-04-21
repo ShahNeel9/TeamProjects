@@ -113,7 +113,7 @@ public class ManageDeliveryJpanel extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(204, 204, 204));
         setPreferredSize(new java.awt.Dimension(1000, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -138,7 +138,7 @@ public class ManageDeliveryJpanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(driverJtable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 690, 162));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 690, 110));
 
         informJtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -161,25 +161,26 @@ public class ManageDeliveryJpanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(informJtable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 700, 192));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 700, 110));
 
         jButton1.setText("Inform Doctor");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, 177, -1));
+
+        txt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         add(txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 310, 189, -1));
 
         jPanel1.setBackground(new java.awt.Color(15, 58, 59));
         jPanel1.setPreferredSize(new java.awt.Dimension(1000, 40));
 
-        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Organ Delivery status");
-
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Icons\\icons8-template.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -204,6 +205,7 @@ public class ManageDeliveryJpanel extends javax.swing.JPanel {
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 400, 50));
 
         jButton2.setText("Back");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);

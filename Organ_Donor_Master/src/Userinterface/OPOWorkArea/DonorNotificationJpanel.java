@@ -138,7 +138,7 @@ public class DonorNotificationJpanel extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(204, 204, 204));
         setPreferredSize(new java.awt.Dimension(1000, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -163,9 +163,10 @@ public class DonorNotificationJpanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(DonorJtable);
 
-        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 970, 163));
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 970, 120));
 
         btnInform.setText("Notify Donor");
+        btnInform.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 2, true));
         btnInform.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInformActionPerformed(evt);
@@ -195,7 +196,7 @@ public class DonorNotificationJpanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(opodoctorJtable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 217, 970, 138));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 217, 970, 120));
 
         jPanel2.setBackground(new java.awt.Color(15, 58, 59));
         jPanel2.setPreferredSize(new java.awt.Dimension(1200, 72));
@@ -204,7 +205,6 @@ public class DonorNotificationJpanel extends javax.swing.JPanel {
         jLabel9.setForeground(new java.awt.Color(240, 240, 240));
         jLabel9.setText("Donor Notification");
 
-        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Icons\\icons8-hospital.png")); // NOI18N
         jLabel10.setText("jLabel7");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);

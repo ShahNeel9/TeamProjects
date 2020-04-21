@@ -89,7 +89,7 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(204, 204, 204));
         setPreferredSize(new java.awt.Dimension(1000, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -117,6 +117,7 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 967, 161));
 
         btnAss.setText("Assign To Me");
+        btnAss.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnAss.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAssActionPerformed(evt);
@@ -126,6 +127,7 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
         add(txtRes, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, 190, -1));
 
         jButton1.setText("process");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -134,6 +136,7 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 490, 142, -1));
 
         btnsend.setText("Send For Delivery");
+        btnsend.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnsend.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsendActionPerformed(evt);
@@ -142,6 +145,7 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
         add(btnsend, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 490, 166, -1));
 
         btnCheck.setText("Check Progress");
+        btnCheck.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCheckActionPerformed(evt);
@@ -160,7 +164,6 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
         jLabel9.setForeground(new java.awt.Color(240, 240, 240));
         jLabel9.setText("Manage Transplantation");
 
-        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Icons\\icons8-hospital.png")); // NOI18N
         jLabel10.setText("jLabel7");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -186,8 +189,6 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
         );
 
         add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1110, 60));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Image\\images (1).jpg")); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 470, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 

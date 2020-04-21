@@ -109,7 +109,7 @@ public class manageRequestJpanel extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(204, 204, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         myJtable.setModel(new javax.swing.table.DefaultTableModel(
@@ -133,9 +133,10 @@ public class manageRequestJpanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(myJtable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 962, 164));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 962, 120));
 
         btnassign.setText("Assign To Me");
+        btnassign.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnassign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnassignActionPerformed(evt);
@@ -164,9 +165,10 @@ public class manageRequestJpanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(reportJtable1);
 
-        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 108, 948, 164));
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 108, 948, 120));
 
         jButton1.setText("Check Report");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -180,8 +182,6 @@ public class manageRequestJpanel extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("My Reports");
-
-        jLabel15.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Icons\\icons8-parse_resume.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -221,8 +221,6 @@ public class manageRequestJpanel extends javax.swing.JPanel {
         jLabel8.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Legal Reports");
-
-        jLabel14.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Icons\\icons8-parse_resume.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);

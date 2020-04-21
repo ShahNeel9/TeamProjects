@@ -45,9 +45,10 @@ public class DoctorWorkAreaJpanel extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(204, 204, 204));
 
         btnManagepatient.setText("Manage Patient Details");
+        btnManagepatient.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnManagepatient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManagepatientActionPerformed(evt);
@@ -55,6 +56,7 @@ public class DoctorWorkAreaJpanel extends javax.swing.JPanel {
         });
 
         btnCreaterequest.setText("Create request for Organ");
+        btnCreaterequest.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnCreaterequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreaterequestActionPerformed(evt);
@@ -62,6 +64,7 @@ public class DoctorWorkAreaJpanel extends javax.swing.JPanel {
         });
 
         btnCheck.setText("Check Organ Delivery");
+        btnCheck.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2));
         btnCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCheckActionPerformed(evt);
@@ -134,7 +137,7 @@ public class DoctorWorkAreaJpanel extends javax.swing.JPanel {
                 .addComponent(btnCreaterequest)
                 .addGap(55, 55, 55)
                 .addComponent(btnCheck)
-                .addContainerGap(191, Short.MAX_VALUE))
+                .addContainerGap(203, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
