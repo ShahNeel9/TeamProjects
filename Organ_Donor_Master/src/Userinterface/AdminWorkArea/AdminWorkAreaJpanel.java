@@ -41,18 +41,26 @@ public class AdminWorkAreaJpanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         valueJlable = new javax.swing.JLabel();
         btnOrg = new javax.swing.JButton();
         btnEmp = new javax.swing.JButton();
         btnUser = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
-        jLabel1.setText(" Admin Work Area");
+        setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(1000, 700));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel2.setText("Enterprise : ");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 210, -1, -1));
 
+        valueJlable.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         valueJlable.setText("<value>");
+        add(valueJlable, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, -1, -1));
 
         btnOrg.setText("Manage Organization");
         btnOrg.addActionListener(new java.awt.event.ActionListener() {
@@ -60,6 +68,7 @@ public class AdminWorkAreaJpanel extends javax.swing.JPanel {
                 btnOrgActionPerformed(evt);
             }
         });
+        add(btnOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, -1, -1));
 
         btnEmp.setText("Manage Employee");
         btnEmp.addActionListener(new java.awt.event.ActionListener() {
@@ -67,48 +76,46 @@ public class AdminWorkAreaJpanel extends javax.swing.JPanel {
                 btnEmpActionPerformed(evt);
             }
         });
+        add(btnEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 400, 181, -1));
 
+        btnUser.setBackground(new java.awt.Color(255, 255, 255));
         btnUser.setText("Manage User");
         btnUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUserActionPerformed(evt);
             }
         });
+        add(btnUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 470, 181, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(valueJlable)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(btnUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnEmp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnOrg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(284, Short.MAX_VALUE))
+        jPanel1.setBackground(new java.awt.Color(15, 58, 59));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1000, 70));
+
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText(" Admin Work Area");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel1)
+                .addContainerGap(572, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(valueJlable))
-                .addGap(91, 91, 91)
-                .addComponent(btnOrg)
-                .addGap(31, 31, 31)
-                .addComponent(btnEmp)
-                .addGap(28, 28, 28)
-                .addComponent(btnUser)
-                .addContainerGap(282, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 810, 60));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\New folder\\TeamProjects\\Organ_Donor_Master\\src\\Icons\\icon1.png")); // NOI18N
+        jLabel3.setText("jLabel3");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 190));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmpActionPerformed
@@ -146,6 +153,8 @@ public class AdminWorkAreaJpanel extends javax.swing.JPanel {
     private javax.swing.JButton btnUser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel valueJlable;
     // End of variables declaration//GEN-END:variables
 }
