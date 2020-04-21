@@ -37,7 +37,7 @@ public class ManageTransplantUser extends javax.swing.JPanel {
         this.account = account;
         populateOrganizationComboBox();
         populateTable();
-        //addInputVerifiers();
+        addInputVerifiers();
         
     }
 

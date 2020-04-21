@@ -280,7 +280,7 @@ public class manageRequestJpanel extends javax.swing.JPanel {
         if(selectedRow>=0){
             
             adminToLegalReport request =(adminToLegalReport)myJtable.getValueAt(selectedRow, 1);
-             ReportJpanel report=new ReportJpanel(request,account,system,container);
+             ReportJpanel report=new ReportJpanel(request,account,system,container,organization);
              container.add("reportjpanel",report);
               CardLayout layout=(CardLayout)container.getLayout();
                 layout.next(container);

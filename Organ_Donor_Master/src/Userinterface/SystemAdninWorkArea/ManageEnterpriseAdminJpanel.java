@@ -391,18 +391,16 @@ public class ManageEnterpriseAdminJpanel extends javax.swing.JPanel {
             {
             JOptionPane.showMessageDialog(null, "User Name already exists!!", "warning", JOptionPane.WARNING_MESSAGE);  
             return;
-            }  
-            else{
-                Employee employee = enterprise.getEmployedirectory().createEmployee(name); 
-        UserAccount account = enterprise.getUseraccountdirectory().CreateUserAccount(username, password, employee, new AdminRole());
-        
-        JOptionPane.showMessageDialog(null, "Enterprise admin Account has been created successfully", "success",JOptionPane.PLAIN_MESSAGE);
-            }
-            }
+            }   
+              }
           }
         }
         
-        
+        Employee employee = enterprise.getEmployedirectory().createEmployee(name); 
+        UserAccount account = enterprise.getUseraccountdirectory().CreateUserAccount(username, password, employee, new AdminRole());
+        //account.setEnabled(true);
+        //account.setNetwork(network);
+        JOptionPane.showMessageDialog(null, "Enterprise admin Account has been created successfully", "success",JOptionPane.PLAIN_MESSAGE);
         enterpriseCombo.setSelectedIndex(0);
         networkJComboBox.setSelectedIndex(0);
         txtUsername.setText("");
@@ -413,6 +411,45 @@ public class ManageEnterpriseAdminJpanel extends javax.swing.JPanel {
        {
         JOptionPane.showMessageDialog(this, "Please enter valid data", "warning",JOptionPane.WARNING_MESSAGE);    
        }
+//            try{
+//            Enterprise enterprise = (Enterprise) enterpriseCombo.getSelectedItem();
+//            Network network = (Network)networkJComboBox.getSelectedItem();
+//            String username = txtUsername.getText();
+//            String password = String.valueOf(txtPassword.getPassword());
+//            String name = txtName.getText();
+//
+//            for(Network network1 : system.getNetworkList())
+//            {
+//              for(Enterprise enterprise1 : network1.getEnterprisedirectory().getEnterpriseList())
+//              {
+//                  for(UserAccount ua : enterprise1.getUseraccountdirectory().getUserAccountList())
+//                  {
+//                if(username.equalsIgnoreCase(ua.getUsername()))
+//                {
+//                JOptionPane.showMessageDialog(null, "User Name already exists!!", "warning", JOptionPane.WARNING_MESSAGE);  
+//                return;
+//                }  
+//                else{
+//                    Employee employee = enterprise.getEmployedirectory().createEmployee(name); 
+//            UserAccount account = enterprise.getUseraccountdirectory().CreateUserAccount(username, password, employee, new AdminRole());
+//
+//            JOptionPane.showMessageDialog(null, "Enterprise admin Account has been created successfully", "success",JOptionPane.PLAIN_MESSAGE);
+//                }
+//                }
+//              }
+//            }
+//
+//
+//            enterpriseCombo.setSelectedIndex(0);
+//            networkJComboBox.setSelectedIndex(0);
+//            txtUsername.setText("");
+//            txtPassword.setText("");
+//            txtName.setText("");
+//            populateTable();
+//            }catch(Exception e)
+//           {
+//            JOptionPane.showMessageDialog(this, "Please enter valid data", "warning",JOptionPane.WARNING_MESSAGE);    
+//           }
         
     }//GEN-LAST:event_btnCreateActionPerformed
 

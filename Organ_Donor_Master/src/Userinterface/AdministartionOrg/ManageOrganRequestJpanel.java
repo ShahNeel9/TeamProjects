@@ -252,15 +252,14 @@ public class ManageOrganRequestJpanel extends javax.swing.JPanel {
                 
          }
          }
-        if(selecterdRow>=0){
+        if(selecterdRow>=0 && networkJComboBox1.getSelectedIndex()>0 && enterprisecombo.getSelectedIndex()>0){
             
             DoctorOrganRequest req1 = (DoctorOrganRequest)organRequestJtable.getValueAt(selecterdRow, 0);
             
-           // req1.setSender(account);
-            //req1.setRequest(status);
+            if(req1.getStatus() == "sendToAdmin"){
+               
             req1.setStatus("sendToOPO");
-//            JOptionPane.showMessageDialog(null, "Request send succesfully");
-//            PopulateTable();
+           
             try{
                    if(org2!=null){
                     org2.getWorkqueue().getWorkrequestList().add(req1);
@@ -274,9 +273,11 @@ public class ManageOrganRequestJpanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "can't send Request");
             }
             
-           
+            }else{
+               JOptionPane.showMessageDialog(null, "can't send request"); 
+            }
         }else{
-            JOptionPane.showMessageDialog(null, "Select Request First");
+            JOptionPane.showMessageDialog(null, "Select All field");
         }
             
             

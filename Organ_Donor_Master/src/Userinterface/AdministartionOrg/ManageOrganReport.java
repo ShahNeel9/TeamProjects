@@ -58,8 +58,8 @@ public class ManageOrganReport extends javax.swing.JPanel {
                     
                     if(req.getStatus().equals("ApproveByDonor")){
                         Object[] row = new Object[5];
-                        row[0] = request;
-                        row[1] = req.getPatient().getName();
+                        row[0] = request.getRequest();
+                        row[1] = req;
                         row[2] = req.getDonor();
                         row[3] = request.getResponse();
                         row[4] = req.getStatus();
@@ -269,7 +269,8 @@ public class ManageOrganReport extends javax.swing.JPanel {
         
         if(selectdRow>=0){
             
-            DoctorOrganRequest request = (DoctorOrganRequest)organRequestJtable.getValueAt(selectdRow, 0);
+            DoctorOrganRequest request = (DoctorOrganRequest)organRequestJtable.getValueAt(selectdRow, 1);
+            
             adminToLegalReport req1 = new adminToLegalReport();
             req1.setSender(account);
             req1.setPatient_name(request.getPatient().getName());
@@ -305,11 +306,14 @@ public class ManageOrganReport extends javax.swing.JPanel {
         if(selectedRow>=0){
             
             adminToLegalReport request = (adminToLegalReport)reportJtable.getValueAt(selectedRow,2);
+            if(request.getStatus() == "complete"){
+                JOptionPane.showMessageDialog(null, "Process complete");
+            }else{
             request.setRequest(approve);
             request.setStatus("SendForApproval");
             JOptionPane.showMessageDialog(null, "Request send succesfully");
             populateReportTable();
-            
+            }
             
         }else{
             JOptionPane.showMessageDialog(null, "Select Request First");

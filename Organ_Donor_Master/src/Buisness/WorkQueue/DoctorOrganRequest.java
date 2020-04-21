@@ -9,6 +9,7 @@ import Buisness.Donor.Donor;
 import Buisness.Patient.Patient;
 import Buisness.UserAccount.UserAccount;
 
+
 /**
  *
  * @author patel
@@ -18,6 +19,7 @@ public class DoctorOrganRequest extends workRequest{
     private Patient patient;
     private Donor donor;
     private UserAccount doctorname;
+   
    
   
 

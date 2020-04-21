@@ -6,6 +6,8 @@
 package Userinterface.LegalAuthorityOrg;
 
 import Buisness.EcoSystem;
+import Buisness.Organization.Organization;
+import Buisness.Patient.Patient;
 import Buisness.UserAccount.UserAccount;
 import Buisness.WorkQueue.adminToLegalReport;
 import Userinterface.SystemAdninWorkArea.SystemAdminWorkAreaJPanel;
@@ -38,15 +40,19 @@ public class ReportJpanel extends javax.swing.JPanel {
     private UserAccount account;
     private EcoSystem system;
     private JPanel container;
-    public ReportJpanel(adminToLegalReport request, UserAccount account, EcoSystem system, JPanel container) {
+    private Organization organization;
+    public ReportJpanel(adminToLegalReport request, UserAccount account, EcoSystem system, JPanel container,Organization organization) {
         initComponents();
         this.request = request;
         this.account = account;
         this.system = system;
         this.container = container;
+        this.organization = organization;
         populateCombobox();
         populateLable();
     }
+
+    
 
     public void sendEmail(String recipient, String details) throws IOException{
         
@@ -221,10 +227,10 @@ public class ReportJpanel extends javax.swing.JPanel {
                 .addGroup(jLayeredPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(organLable))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        add(jLayeredPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 562, -1));
+        add(jLayeredPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 117, 562, 350));
 
         jButton1.setText("Send Report");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -232,14 +238,14 @@ public class ReportJpanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(284, 701, 170, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 560, 170, -1));
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI", 1, 16)); // NOI18N
         jLabel3.setText("Response");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 580, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 490, -1, -1));
 
         responseCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select" }));
-        add(responseCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 580, 193, -1));
+        add(responseCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 490, 193, -1));
 
         btnBack.setText("<<Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -255,7 +261,7 @@ public class ReportJpanel extends javax.swing.JPanel {
                 mailActionPerformed(evt);
             }
         });
-        add(mail, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 580, 128, -1));
+        add(mail, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, 128, -1));
 
         jPanel2.setBackground(new java.awt.Color(15, 58, 59));
         jPanel2.setPreferredSize(new java.awt.Dimension(1000, 40));
@@ -297,6 +303,13 @@ public class ReportJpanel extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
         String res = responseCombo.getSelectedItem().toString();
+        if(res.equals("Decline") ){
+          for(Patient p : organization.getPatientdirectory().getPatientdirectory()){
+              if(request.getPatient_email().equals(p.getEmailid())){
+                  p.setFlag("eligible");
+              }
+          }  
+        }
         try{
             
             request.setResponse(res);

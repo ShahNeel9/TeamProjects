@@ -61,8 +61,8 @@ public class LabAssistanceWorkAreaJpanel extends javax.swing.JPanel {
                for(workRequest request : org.getWorkqueue().getWorkrequestList()){
                    DoctorOrganRequest req = (DoctorOrganRequest)request;
                    Object[] row = new Object[5];
-                   row[0] = req.getPatient().getName();
-                   row[1] = request;
+                   row[0] = req;
+                   row[1] = request.getRequest();
                    row[2] = req.getDonor();
                    row[3] = request.getResponse();
                    row[4] = request.getStatus();
@@ -81,8 +81,8 @@ public class LabAssistanceWorkAreaJpanel extends javax.swing.JPanel {
            DoctorOrganRequest req = (DoctorOrganRequest)request;
            Object[] row = new Object[6];
                    row[0] = request.getReceiver().getUsername();
-                   row[1] = req.getPatient().getName();
-                   row[2] = request;
+                   row[1] = req;
+                   row[2] = request.getRequest();
                    row[3] = request.getResponse();
                    row[4] = req.getDonor();
                    row[5] = request.getStatus();
@@ -258,7 +258,8 @@ public class LabAssistanceWorkAreaJpanel extends javax.swing.JPanel {
         if(selectedRow>=0){
             
            // opoDoctorToLabRequest request = (opoDoctorToLabRequest)LabJtable.getValueAt(selectedRow, 0);
-            DoctorOrganRequest request = (DoctorOrganRequest)myJtable.getValueAt(selectedRow, 2);
+            DoctorOrganRequest request = (DoctorOrganRequest)myJtable.getValueAt(selectedRow, 1);
+            if(request.getDonor() == null){
             Patient p = (Patient)request.getPatient();
             Donor donor = null;
             //System.out.println(p);
@@ -282,7 +283,10 @@ public class LabAssistanceWorkAreaJpanel extends javax.swing.JPanel {
         container.add("Addpatientdetail", add);
         CardLayout layout = (CardLayout) container.getLayout();
         layout.next(container);
-        
+        }
+            else{
+               JOptionPane.showMessageDialog(null, "already process");
+            }
         }else{
             JOptionPane.showMessageDialog(null, "Please select Patient");
         }
@@ -294,11 +298,14 @@ public class LabAssistanceWorkAreaJpanel extends javax.swing.JPanel {
         int selectedrow = (int)LabJtable.getSelectedRow();
         if(selectedrow>=0){
             
-            DoctorOrganRequest request = (DoctorOrganRequest)LabJtable.getValueAt(selectedrow, 1);
+            DoctorOrganRequest request = (DoctorOrganRequest)LabJtable.getValueAt(selectedrow, 0);
+            if(request.getStatus() == "sendToOPO"){
             request.setReceiver(account);
             account.getWorkqueue().getWorkrequestList().add(request);
             mypopulateTable();
-            
+            }else{
+                JOptionPane.showMessageDialog(null, "Request already process"); 
+            } 
             
         }else{
             

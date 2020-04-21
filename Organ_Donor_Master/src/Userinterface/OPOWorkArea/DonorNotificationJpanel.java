@@ -58,8 +58,8 @@ public class DonorNotificationJpanel extends javax.swing.JPanel {
                     if(req.getDonor()!=null){
                         
                         Object[] row = new Object[5];
-                        row[0] = req.getPatient().getName();
-                        row[1] = request; 
+                        row[0] = req;
+                        row[1] = request.getRequest(); 
                         row[2] = req.getDonor();
                         row[3] = request.getResponse();
                         row[4] = req.getStatus();
