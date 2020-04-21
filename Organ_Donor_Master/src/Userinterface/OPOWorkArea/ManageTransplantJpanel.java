@@ -83,6 +83,14 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         btnsend = new javax.swing.JButton();
         btnCheck = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(1000, 700));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         transplantJtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -105,12 +113,16 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(transplantJtable);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 967, 161));
+
         btnAss.setText("Assign To Me");
         btnAss.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAssActionPerformed(evt);
             }
         });
+        add(btnAss, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 430, -1, -1));
+        add(txtRes, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, 190, -1));
 
         jButton1.setText("process");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -118,6 +130,7 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 520, 142, -1));
 
         btnsend.setText("Send For Delivery");
         btnsend.addActionListener(new java.awt.event.ActionListener() {
@@ -125,6 +138,7 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
                 btnsendActionPerformed(evt);
             }
         });
+        add(btnsend, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 520, 166, -1));
 
         btnCheck.setText("Check Progress");
         btnCheck.addActionListener(new java.awt.event.ActionListener() {
@@ -132,41 +146,44 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
                 btnCheckActionPerformed(evt);
             }
         });
+        add(btnCheck, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 520, 169, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnAss)
-                        .addGap(43, 43, 43)
-                        .addComponent(txtRes, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(82, 82, 82)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(73, 73, 73)
-                        .addComponent(btnsend, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnCheck, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(123, 123, 123)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/organ-donation-logo.jpg"))); // NOI18N
+        jLabel8.setText("jLabel2");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 90));
+
+        jPanel2.setBackground(new java.awt.Color(15, 58, 59));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1200, 72));
+
+        jLabel9.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel9.setText("Manage Transplantation");
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-network.png"))); // NOI18N
+        jLabel10.setText("jLabel7");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAss)
-                    .addComponent(btnsend)
-                    .addComponent(txtRes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1)
-                    .addComponent(btnCheck))
-                .addContainerGap(443, Short.MAX_VALUE))
+                .addComponent(jLabel9)
+                .addContainerGap(738, Short.MAX_VALUE))
         );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel9))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1110, 80));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAssActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssActionPerformed
@@ -298,6 +315,10 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
     private javax.swing.JButton btnCheck;
     private javax.swing.JButton btnsend;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable transplantJtable;
     private javax.swing.JTextField txtRes;

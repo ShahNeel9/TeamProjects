@@ -187,8 +187,6 @@ public class ManageTransplantOrganization extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(15, 58, 59));
         jPanel1.setPreferredSize(new java.awt.Dimension(1000, 70));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\New folder\\TeamProjects\\Organ_Donor_Master\\src\\Icons\\icons8-geography.png")); // NOI18N
-
         jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Manage Organization");
@@ -202,13 +200,13 @@ public class ManageTransplantOrganization extends javax.swing.JPanel {
                 .addComponent(jLabel4)
                 .addGap(64, 64, 64)
                 .addComponent(jLabel1)
-                .addContainerGap(580, Short.MAX_VALUE))
+                .addContainerGap(660, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(20, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(29, 29, 29))
         );

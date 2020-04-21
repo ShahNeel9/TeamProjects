@@ -54,6 +54,7 @@ public class AdministrationJpanel extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1000, 700));
@@ -93,8 +94,6 @@ public class AdministrationJpanel extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(15, 58, 59));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\New folder\\TeamProjects\\Organ_Donor_Master\\src\\Icons\\icons8-businessman.png")); // NOI18N
-
         jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Administration Organization");
@@ -119,7 +118,11 @@ public class AdministrationJpanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 1000, 70));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1000, 70));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/organ-donation-logo.jpg"))); // NOI18N
+        jLabel8.setText("jLabel2");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 90));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOrganrequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrganrequestActionPerformed
@@ -166,6 +169,7 @@ public class AdministrationJpanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

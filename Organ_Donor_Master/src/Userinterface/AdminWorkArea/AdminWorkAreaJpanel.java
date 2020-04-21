@@ -48,7 +48,6 @@ public class AdminWorkAreaJpanel extends javax.swing.JPanel {
         btnUser = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1000, 700));
@@ -68,7 +67,7 @@ public class AdminWorkAreaJpanel extends javax.swing.JPanel {
                 btnOrgActionPerformed(evt);
             }
         });
-        add(btnOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, -1, -1));
+        add(btnOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(361, 319, 220, 40));
 
         btnEmp.setText("Manage Employee");
         btnEmp.addActionListener(new java.awt.event.ActionListener() {
@@ -76,7 +75,7 @@ public class AdminWorkAreaJpanel extends javax.swing.JPanel {
                 btnEmpActionPerformed(evt);
             }
         });
-        add(btnEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 400, 181, -1));
+        add(btnEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(361, 389, 220, 40));
 
         btnUser.setBackground(new java.awt.Color(255, 255, 255));
         btnUser.setText("Manage User");
@@ -85,7 +84,7 @@ public class AdminWorkAreaJpanel extends javax.swing.JPanel {
                 btnUserActionPerformed(evt);
             }
         });
-        add(btnUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 470, 181, -1));
+        add(btnUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(361, 459, 220, 40));
 
         jPanel1.setBackground(new java.awt.Color(15, 58, 59));
         jPanel1.setPreferredSize(new java.awt.Dimension(1000, 70));
@@ -101,7 +100,7 @@ public class AdminWorkAreaJpanel extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel1)
-                .addContainerGap(572, Short.MAX_VALUE))
+                .addContainerGap(762, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,11 +110,7 @@ public class AdminWorkAreaJpanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 810, 60));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\New folder\\TeamProjects\\Organ_Donor_Master\\src\\Icons\\icon1.png")); // NOI18N
-        jLabel3.setText("jLabel3");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 190));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, -1, 60));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmpActionPerformed
@@ -153,7 +148,6 @@ public class AdminWorkAreaJpanel extends javax.swing.JPanel {
     private javax.swing.JButton btnUser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel valueJlable;
     // End of variables declaration//GEN-END:variables

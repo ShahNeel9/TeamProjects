@@ -81,7 +81,7 @@ public class ManageNetworkJpanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1200, 700));
-        setPreferredSize(new java.awt.Dimension(1200, 700));
+        setPreferredSize(new java.awt.Dimension(1000, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         NetworkJtable.setModel(new javax.swing.table.DefaultTableModel(
@@ -231,7 +231,7 @@ public class ManageNetworkJpanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1110, 60));
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1110, 80));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/organ-donation-logo.jpg"))); // NOI18N
         jLabel3.setText("jLabel2");
