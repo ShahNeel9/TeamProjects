@@ -163,7 +163,7 @@ public class DonorNotificationJpanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(DonorJtable);
 
-        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 477, 970, 163));
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 970, 163));
 
         btnInform.setText("Notify Donor");
         btnInform.addActionListener(new java.awt.event.ActionListener() {
@@ -171,8 +171,8 @@ public class DonorNotificationJpanel extends javax.swing.JPanel {
                 btnInformActionPerformed(evt);
             }
         });
-        add(btnInform, new org.netbeans.lib.awtextra.AbsoluteConstraints(641, 405, 173, -1));
-        add(txtInform, new org.netbeans.lib.awtextra.AbsoluteConstraints(286, 406, 278, -1));
+        add(btnInform, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 173, -1));
+        add(txtInform, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, 278, -1));
 
         opodoctorJtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -204,7 +204,7 @@ public class DonorNotificationJpanel extends javax.swing.JPanel {
         jLabel9.setForeground(new java.awt.Color(240, 240, 240));
         jLabel9.setText("Donor Notification");
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-network.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Icons\\icons8-hospital.png")); // NOI18N
         jLabel10.setText("jLabel7");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -212,23 +212,24 @@ public class DonorNotificationJpanel extends javax.swing.JPanel {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(23, 23, 23)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
                 .addComponent(jLabel9)
-                .addContainerGap(810, Short.MAX_VALUE))
+                .addContainerGap(659, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel9))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel9)
+                .addContainerGap(23, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jLabel10)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1110, 80));
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1000, 70));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/organ-donation-logo.jpg"))); // NOI18N
         jLabel8.setText("jLabel2");

@@ -113,30 +113,45 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(1000, 700));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setText("Name");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 105, -1, -1));
+        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 102, 133, -1));
 
         jLabel3.setText("Email Id");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 149, -1, -1));
 
         txtEmailid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEmailidActionPerformed(evt);
             }
         });
+        add(txtEmailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 146, 133, -1));
 
         jLabel4.setText("Phone Number");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 184, -1, -1));
+        add(txtPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 181, 133, -1));
 
         jLabel5.setText("Blood Type");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 314, -1, -1));
 
         jLabel6.setText("Weight");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 226, -1, -1));
+        add(txtWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 223, 133, -1));
 
         jLabel7.setText("How Sick");
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 363, -1, -1));
 
         jLabel8.setText("Tissue Type");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 421, -1, -1));
 
         jLabel9.setText("Which Organ");
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 465, -1, -1));
 
         jLabel10.setText("Needs To Transplant");
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 497, -1, -1));
 
         SickCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select" }));
         SickCombo.addActionListener(new java.awt.event.ActionListener() {
@@ -144,6 +159,7 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
                 SickComboActionPerformed(evt);
             }
         });
+        add(SickCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 360, 133, -1));
 
         TissueCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select" }));
         TissueCombo.addActionListener(new java.awt.event.ActionListener() {
@@ -151,6 +167,7 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
                 TissueComboActionPerformed(evt);
             }
         });
+        add(TissueCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 418, 133, -1));
 
         bloodCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select" }));
         bloodCombo.addActionListener(new java.awt.event.ActionListener() {
@@ -158,6 +175,7 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
                 bloodComboActionPerformed(evt);
             }
         });
+        add(bloodCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 311, 133, -1));
 
         OrganCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select" }));
         OrganCombo.addActionListener(new java.awt.event.ActionListener() {
@@ -165,6 +183,7 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
                 OrganComboActionPerformed(evt);
             }
         });
+        add(OrganCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 462, 133, -1));
 
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -172,6 +191,7 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
                 btnSubmitActionPerformed(evt);
             }
         });
+        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(319, 581, 118, -1));
 
         btnBack.setText("<<Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -179,8 +199,11 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jLabel11.setText("Respiratory Rate");
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 270, -1, -1));
+        add(txtrate, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 267, 133, -1));
 
         jPanel4.setBackground(new java.awt.Color(15, 58, 59));
         jPanel4.setPreferredSize(new java.awt.Dimension(1000, 40));
@@ -215,111 +238,10 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        jLabel1.setText("jLabel1");
+        add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 47, 396, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(319, 319, 319)
-                .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(btnBack)
-                .addGap(66, 66, 66)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel10))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(TissueCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel11)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel9)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel3))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(150, 150, 150)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtEmailid, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(txtPhone)
-                                                .addComponent(txtWeight)
-                                                .addComponent(txtrate)
-                                                .addComponent(bloodCombo, 0, 133, Short.MAX_VALUE)
-                                                .addComponent(SickCombo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(txtName))))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(OrganCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(171, 171, 171))))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(btnBack)
-                .addGap(34, 34, 34)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtEmailid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(txtrate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(bloodCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(SickCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(TissueCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(OrganCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addComponent(jLabel10)
-                .addGap(31, 31, 31)
-                .addComponent(btnSubmit)
-                .addGap(86, 86, 86))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Image\\1.gif")); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void SickComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SickComboActionPerformed

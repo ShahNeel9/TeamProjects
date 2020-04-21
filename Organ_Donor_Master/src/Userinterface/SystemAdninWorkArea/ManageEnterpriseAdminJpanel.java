@@ -46,23 +46,23 @@ public class ManageEnterpriseAdminJpanel extends javax.swing.JPanel {
         
     }
 
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        Graphics2D g2d = (Graphics2D) g;
-        g2d.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
-        int w = getWidth();
-        int h = getHeight();
-        
-        Color c1 = new Color(153,197,85);
-        Color c2 = Color.white;
-     
-        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
-        setOpaque( false );
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);
-        setOpaque( true );
-    }
+//    @Override
+//    protected void paintComponent(Graphics g) {
+//        super.paintComponent(g);
+//        Graphics2D g2d = (Graphics2D) g;
+//        g2d.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+//        int w = getWidth();
+//        int h = getHeight();
+//        
+//        Color c1 = new Color(153,197,85);
+//        Color c2 = Color.white;
+//     
+//        GradientPaint gp = new GradientPaint(w/4, 0, c2, w/4, h, c1);
+//        setOpaque( false );
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+//        setOpaque( true );
+//    }
    private void populateTable() {
         DefaultTableModel model = (DefaultTableModel)EnterpriseJtable.getModel();
 
@@ -152,7 +152,7 @@ public class ManageEnterpriseAdminJpanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 500, -1, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, -1, -1));
 
         EnterpriseJtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -177,6 +177,7 @@ public class ManageEnterpriseAdminJpanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 253, 427, 208));
 
+        jLayeredPane1.setBackground(new java.awt.Color(165, 192, 185));
         jLayeredPane1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         networkJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select" }));
@@ -314,7 +315,7 @@ public class ManageEnterpriseAdminJpanel extends javax.swing.JPanel {
                 btnDeleteActionPerformed(evt);
             }
         });
-        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 500, 90, -1));
+        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 470, 90, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/organ-donation-logo.jpg"))); // NOI18N
         jLabel8.setText("jLabel2");

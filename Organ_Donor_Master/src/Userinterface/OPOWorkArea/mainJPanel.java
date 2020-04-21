@@ -65,7 +65,7 @@ public class mainJPanel extends javax.swing.JPanel {
                 txtmanageActionPerformed(evt);
             }
         });
-        add(txtmanage, new org.netbeans.lib.awtextra.AbsoluteConstraints(284, 246, 227, -1));
+        add(txtmanage, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 240, 227, -1));
 
         btnNotify.setText("Notify Donor");
         btnNotify.addActionListener(new java.awt.event.ActionListener() {
@@ -73,7 +73,7 @@ public class mainJPanel extends javax.swing.JPanel {
                 btnNotifyActionPerformed(evt);
             }
         });
-        add(btnNotify, new org.netbeans.lib.awtextra.AbsoluteConstraints(284, 317, 227, -1));
+        add(btnNotify, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, 227, -1));
 
         jButton1.setText("Manage Transplant Request");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +81,7 @@ public class mainJPanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(284, 397, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 380, -1, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/organ-donation-logo.jpg"))); // NOI18N
         jLabel8.setText("jLabel2");
@@ -94,7 +94,7 @@ public class mainJPanel extends javax.swing.JPanel {
         jLabel9.setForeground(new java.awt.Color(240, 240, 240));
         jLabel9.setText("Organ Procurement Work Area");
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-network.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Icons\\icons8-charity.png")); // NOI18N
         jLabel10.setText("jLabel7");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -102,20 +102,21 @@ public class mainJPanel extends javax.swing.JPanel {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(272, 272, 272)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel9)
-                .addContainerGap(664, Short.MAX_VALUE))
+                .addContainerGap(386, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel9))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addComponent(jLabel9)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jLabel10)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1110, 80));

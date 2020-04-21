@@ -64,7 +64,7 @@ public class ManageOrganRequestJpanel extends javax.swing.JPanel {
         for(Enterprise enterprise : network.getEnterprisedirectory().getEnterpriseList()){
             
             if(enterprise.getEnterprisetype().getValue().equals(Enterprise.EnterpriseType.OPO.getValue())){
-                ORGcombo.addItem(enterprise.getName());
+                ORGcombo.addItem(enterprise.toString());
             }
         }
         
@@ -229,6 +229,7 @@ public class ManageOrganRequestJpanel extends javax.swing.JPanel {
         int selecterdRow = (int)organRequestJtable.getSelectedRow();
        // String status = txtStatus.getText();
         Organization org2 = null;
+        
          for(Network network : system.getNetworkList()){
              for(Enterprise enterprise : network.getEnterprisedirectory().getEnterpriseList()){
                  for(Organization organization : enterprise.getOrganizationdirectory().getOrganizationList()){

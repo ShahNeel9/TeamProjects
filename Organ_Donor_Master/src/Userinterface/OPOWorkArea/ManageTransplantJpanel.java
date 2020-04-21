@@ -87,6 +87,7 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1000, 700));
@@ -130,7 +131,7 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 520, 142, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 490, 142, -1));
 
         btnsend.setText("Send For Delivery");
         btnsend.addActionListener(new java.awt.event.ActionListener() {
@@ -138,7 +139,7 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
                 btnsendActionPerformed(evt);
             }
         });
-        add(btnsend, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 520, 166, -1));
+        add(btnsend, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 490, 166, -1));
 
         btnCheck.setText("Check Progress");
         btnCheck.addActionListener(new java.awt.event.ActionListener() {
@@ -146,7 +147,7 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
                 btnCheckActionPerformed(evt);
             }
         });
-        add(btnCheck, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 520, 169, -1));
+        add(btnCheck, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 490, 169, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/organ-donation-logo.jpg"))); // NOI18N
         jLabel8.setText("jLabel2");
@@ -159,7 +160,7 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
         jLabel9.setForeground(new java.awt.Color(240, 240, 240));
         jLabel9.setText("Manage Transplantation");
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-network.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Icons\\icons8-hospital.png")); // NOI18N
         jLabel10.setText("jLabel7");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -167,9 +168,9 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(3, 3, 3)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel9)
                 .addContainerGap(738, Short.MAX_VALUE))
         );
@@ -177,13 +178,17 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel9))
+                .addComponent(jLabel9)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1110, 80));
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1110, 60));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Image\\images (1).jpg")); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 470, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAssActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssActionPerformed
@@ -315,6 +320,7 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
     private javax.swing.JButton btnCheck;
     private javax.swing.JButton btnsend;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

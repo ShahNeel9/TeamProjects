@@ -78,8 +78,10 @@ public class FindMatchJpanel extends javax.swing.JPanel {
         jPanel4 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(1000, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         donorJtable.setModel(new javax.swing.table.DefaultTableModel(
@@ -103,20 +105,20 @@ public class FindMatchJpanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(donorJtable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 243, 748, 191));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 748, 191));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI", 1, 16)); // NOI18N
         jLabel1.setText("Lab Test Result :");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 452, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, -1, -1));
 
         resultJlable.setFont(new java.awt.Font("Yu Gothic UI", 1, 16)); // NOI18N
         resultJlable.setText("<value>");
-        add(resultJlable, new org.netbeans.lib.awtextra.AbsoluteConstraints(211, 452, 317, -1));
+        add(resultJlable, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, 317, -1));
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI", 1, 16)); // NOI18N
         jLabel2.setText("Response");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 523, -1, -1));
-        add(txtResponse, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 520, 256, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 460, -1, -1));
+        add(txtResponse, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 460, 256, -1));
 
         btnResponse.setText("send Report");
         btnResponse.addActionListener(new java.awt.event.ActionListener() {
@@ -124,7 +126,7 @@ public class FindMatchJpanel extends javax.swing.JPanel {
                 btnResponseActionPerformed(evt);
             }
         });
-        add(btnResponse, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 519, 180, -1));
+        add(btnResponse, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 460, 180, -1));
 
         btnBack.setText("<<Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -141,6 +143,8 @@ public class FindMatchJpanel extends javax.swing.JPanel {
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Donor and Patient Match");
 
+        jLabel14.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Icons\\icons8-microscope.png")); // NOI18N
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -148,23 +152,21 @@ public class FindMatchJpanel extends javax.swing.JPanel {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel9)
-                .addContainerGap(381, Short.MAX_VALUE))
-            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel4Layout.createSequentialGroup()
-                    .addGap(78, 78, 78)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
-                    .addContainerGap()))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addComponent(jLabel14)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addComponent(jLabel9)
-                .addContainerGap(49, Short.MAX_VALUE))
-            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel4Layout.createSequentialGroup()
-                    .addGap(10, 10, 10)
-                    .addComponent(jLabel10)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel10)
+                .addGap(33, 33, 33))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jLabel14)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 396, -1));
@@ -218,6 +220,7 @@ public class FindMatchJpanel extends javax.swing.JPanel {
     private javax.swing.JTable donorJtable;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel4;
