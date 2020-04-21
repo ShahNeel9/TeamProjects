@@ -37,6 +37,7 @@ public class ManageOrganRequestJpanel extends javax.swing.JPanel {
     private Enterprise enterprise;
     private AdministrationOrganization org;
     private EcoSystem system;
+    private Enterprise ent;
     public ManageOrganRequestJpanel(JPanel container, UserAccount account, Enterprise enterprise,EcoSystem system) {
         initComponents();
         this.container = container;
@@ -51,20 +52,20 @@ public class ManageOrganRequestJpanel extends javax.swing.JPanel {
 
     public void populatecombo(){
         
-        networkJComboBox.removeAllItems();
+        networkJComboBox1.removeAllItems();
       
         for(Network network : system.getNetworkList()){
-            networkJComboBox.addItem(network);
+            networkJComboBox1.addItem(network);
         }
     
     }
     public void populateEnterpriseComboBox(Network network){
         
-        ORGcombo.removeAllItems();
+        enterprisecombo.removeAllItems();
         for(Enterprise enterprise : network.getEnterprisedirectory().getEnterpriseList()){
             
             if(enterprise.getEnterprisetype().getValue().equals(Enterprise.EnterpriseType.OPO.getValue())){
-                ORGcombo.addItem(enterprise.toString());
+                enterprisecombo.addItem(enterprise);
             }
         }
         
@@ -123,12 +124,12 @@ public class ManageOrganRequestJpanel extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         btnRequest = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        ORGcombo = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
-        networkJComboBox = new javax.swing.JComboBox();
+        enterprisecombo = new javax.swing.JComboBox();
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        networkJComboBox1 = new javax.swing.JComboBox();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1000, 700));
@@ -176,19 +177,16 @@ public class ManageOrganRequestJpanel extends javax.swing.JPanel {
         jLabel2.setText("Enterprise");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, 106, -1));
 
-        ORGcombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select" }));
-        add(ORGcombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 170, 176, -1));
-
         jLabel3.setText("Network");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 100, -1));
 
-        networkJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        networkJComboBox.addActionListener(new java.awt.event.ActionListener() {
+        enterprisecombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        enterprisecombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                networkJComboBoxActionPerformed(evt);
+                enterprisecomboActionPerformed(evt);
             }
         });
-        add(networkJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 174, -1));
+        add(enterprisecombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 170, 174, -1));
 
         jPanel1.setBackground(new java.awt.Color(15, 58, 59));
         jPanel1.setPreferredSize(new java.awt.Dimension(1000, 40));
@@ -222,6 +220,14 @@ public class ManageOrganRequestJpanel extends javax.swing.JPanel {
         );
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 1000, 40));
+
+        networkJComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        networkJComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                networkJComboBox1ActionPerformed(evt);
+            }
+        });
+        add(networkJComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 174, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestActionPerformed
@@ -229,10 +235,12 @@ public class ManageOrganRequestJpanel extends javax.swing.JPanel {
         int selecterdRow = (int)organRequestJtable.getSelectedRow();
        // String status = txtStatus.getText();
         Organization org2 = null;
-        
+        Enterprise ent1 = (Enterprise)enterprisecombo.getSelectedItem();
          for(Network network : system.getNetworkList()){
              for(Enterprise enterprise : network.getEnterprisedirectory().getEnterpriseList()){
-                 for(Organization organization : enterprise.getOrganizationdirectory().getOrganizationList()){
+                 if(enterprise.equals(ent1)){
+                     
+                 for(Organization organization : ent1.getOrganizationdirectory().getOrganizationList()){
                      
                      if(organization instanceof DonorOrganization){
                          
@@ -243,7 +251,7 @@ public class ManageOrganRequestJpanel extends javax.swing.JPanel {
              }
                 
          }
-        
+         }
         if(selecterdRow>=0){
             
             DoctorOrganRequest req1 = (DoctorOrganRequest)organRequestJtable.getValueAt(selecterdRow, 0);
@@ -285,19 +293,27 @@ public class ManageOrganRequestJpanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void networkJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkJComboBoxActionPerformed
+    private void enterprisecomboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterprisecomboActionPerformed
+//        // TODO add your handling code here:
+//         Network network = (Network) enterprisecombo.getSelectedItem();
+//        if (network != null){
+//            populateEnterpriseComboBox(network);
+//        }
+
+    }//GEN-LAST:event_enterprisecomboActionPerformed
+
+    private void networkJComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkJComboBox1ActionPerformed
         // TODO add your handling code here:
-         Network network = (Network) networkJComboBox.getSelectedItem();
+          Network network = (Network) networkJComboBox1.getSelectedItem();
         if (network != null){
             populateEnterpriseComboBox(network);
         }
-
-    }//GEN-LAST:event_networkJComboBoxActionPerformed
+    }//GEN-LAST:event_networkJComboBox1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> ORGcombo;
     private javax.swing.JButton btnRequest;
+    private javax.swing.JComboBox enterprisecombo;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -305,7 +321,7 @@ public class ManageOrganRequestJpanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JComboBox networkJComboBox;
+    private javax.swing.JComboBox networkJComboBox1;
     private javax.swing.JTable organRequestJtable;
     // End of variables declaration//GEN-END:variables
 }

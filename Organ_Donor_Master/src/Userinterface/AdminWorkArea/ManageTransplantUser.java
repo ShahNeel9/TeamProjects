@@ -349,6 +349,8 @@ public class ManageTransplantUser extends javax.swing.JPanel {
                  JOptionPane.showMessageDialog(null, " User Account has been created successfully", "success",JOptionPane.PLAIN_MESSAGE);
                  txtusername.setText("");
                  txtPassword.setText("");
+             }else{
+                 JOptionPane.showMessageDialog(this, "user Already exist", "warning",JOptionPane.WARNING_MESSAGE); 
              }
             
         }catch(Exception e){

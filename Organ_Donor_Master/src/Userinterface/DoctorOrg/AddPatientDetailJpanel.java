@@ -13,8 +13,19 @@ import Buisness.Validation.validateEmailid;
 import Buisness.Validation.validateInteger;
 import Buisness.Validation.validatePhone;
 import Buisness.Validation.validateWeight;
+import Userinterface.LegalAuthorityOrg.ReportJpanel;
+import com.sendgrid.Content;
+import com.sendgrid.Email;
+import com.sendgrid.Mail;
+import com.sendgrid.Method;
+import com.sendgrid.Request;
+import com.sendgrid.Response;
+import com.sendgrid.SendGrid;
 import java.awt.CardLayout;
 import java.awt.Component;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.InputVerifier;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -67,6 +78,18 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
         OrganCombo.addItem("Intestines");
         
     }
+    
+    public void clearfield(){
+        txtName.setText("");
+        txtEmailid.setText("");
+        txtPhone.setText("");
+        txtWeight.setText("");
+        txtrate.setText("");
+        bloodCombo.setSelectedIndex(0);
+        SickCombo.setSelectedIndex(0);
+        TissueCombo.setSelectedIndex(0);
+        OrganCombo.setSelectedIndex(0);
+    }
 
     public void addInputverifiers(){
         
@@ -82,6 +105,29 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
         txtrate.setInputVerifier(ratevalidation);
     }
     
+    public void sendEmail(String recipient, String details) throws IOException{
+        
+    Email from = new Email("sapna.patel.01993@gmail.com");
+    String subject = "Notification";
+    Email to = new Email(recipient);
+    Content content = new Content("text/plain", details);
+    Mail mail = new Mail(from, subject, to, content);
+
+    SendGrid sg = new SendGrid("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");
+    Request request = new Request();
+    try {
+      request.setMethod(Method.POST);
+      request.setEndpoint("mail/send");
+      request.setBody(mail.build());
+      Response response = sg.api(request);
+      System.out.println(response.getStatusCode());
+      System.out.println(response.getBody());
+      System.out.println(response.getHeaders());
+    } catch (IOException ex) {
+      throw ex;
+    }
+        
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -277,20 +323,21 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
         String organ = (String)OrganCombo.getSelectedItem();
         int rate = Integer.parseInt(txtrate.getText());
         String flag = "eligible";
+        String details = "You added to waitingList";
         
-        if(txtName.getText().trim().isEmpty() ||
-            txtEmailid.getText().trim().isEmpty() ||
-            txtPhone.getText().trim().isEmpty() ||
-             bloodCombo.getSelectedIndex()<0 ||
-               txtWeight.getText().trim().isEmpty() ||
-                SickCombo.getSelectedIndex()<0 ||
-                TissueCombo.getSelectedIndex()<0||
-                OrganCombo.getSelectedIndex()<0 ||
+        if(txtName.getText().trim().isEmpty() &&
+            txtEmailid.getText().trim().isEmpty() &&
+            txtPhone.getText().trim().isEmpty() &&
+             bloodCombo.getSelectedIndex()<0 &&
+               txtWeight.getText().trim().isEmpty() &&
+                SickCombo.getSelectedIndex()<=00 &&
+                TissueCombo.getSelectedIndex()<=00 &&
+                OrganCombo.getSelectedIndex()<=00 &&
                 txtrate.getText().trim().isEmpty()){
             
             JOptionPane.showMessageDialog(null, "Please Enter All Field");
            return;  
-        }
+        }else{
        
             boolean check = organization.getPatientdirectory().checkIfUsernameIsUnique(emailid);
             
@@ -298,12 +345,19 @@ public class AddPatientDetailJpanel extends javax.swing.JPanel {
             try{
             organization.getPatientdirectory().ADDPatient(name, emailid, phone, bloodtype, weight, howsick, tissue, organ,rate,flag);
             JOptionPane.showMessageDialog(null, "Patient Details Added succesfully");
+             try {
+                    sendEmail(emailid, details);
+                    //JOptionPane.showMessageDialog(null, "Report mail send successfully");
+                } catch (IOException ex) {
+                    Logger.getLogger(ReportJpanel.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            clearfield();
             }catch(Exception e){   
             }
             }else{
                  JOptionPane.showMessageDialog(null, "Patient Already Exist"); 
             }
-        
+        }
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

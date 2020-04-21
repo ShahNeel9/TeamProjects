@@ -72,7 +72,18 @@ public class AddDetailJpanel extends javax.swing.JPanel {
         OrganCombo.addItem("Intestines");
     }
 
-    
+    public void clearfield(){
+        
+        txtemailid.setText("");
+        txtPhone.setText("");
+        txtRate.setText("");
+        txtWeight.setText("");
+        txtpressure.setText("");
+        bloodCombo.setSelectedIndex(0);
+        TissueCombo.setSelectedIndex(0);
+        OrganCombo.setSelectedIndex(0);
+        
+    }
 
    public void addInputverifiers(){
         
@@ -229,7 +240,7 @@ public class AddDetailJpanel extends javax.swing.JPanel {
         add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 396, -1));
 
         jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Image\\GlossyCooperativeAxisdeer-max-1mb.gif")); // NOI18N
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 300, 330, -1));
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 300, 350, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
@@ -257,30 +268,29 @@ public class AddDetailJpanel extends javax.swing.JPanel {
                 txtRate.getText().trim().isEmpty() ||
                 txtWeight.getText().trim().isEmpty() ||
                 txtpressure.getText().trim().isEmpty() ||
-                bloodCombo.getSelectedIndex()<0 ||
-                TissueCombo.getSelectedIndex()<0 ||
-                OrganCombo.getSelectedIndex() < 0){
+                bloodCombo.getSelectedIndex()<=0 ||
+                TissueCombo.getSelectedIndex()<=0 ||
+                OrganCombo.getSelectedIndex()<=0){
             
             JOptionPane.showMessageDialog(null, "Please Enter All Field");
            return;  
-        }
+        }else{
         boolean result = organization.getDonorlist().checkIfUsernameIsUnique(name);
         if(result == true){
             try{
             
             organization.getDonorlist().AddDonor(name, emailid, phone, weight, bloodgrp, tissue, rate, bp, organ);
-            
-            
             JOptionPane.showMessageDialog(null, "Details added succesfully");
+            clearfield();
+            
             }catch(Exception e){
-            JOptionPane.showMessageDialog(null, "Something went wrong");
-          
+            
             }  
         }else{
             JOptionPane.showMessageDialog(null, "User Already exist");
         }
         
-        
+        } 
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
