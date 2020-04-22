@@ -252,11 +252,11 @@ public class ManageOrganRequestJpanel extends javax.swing.JPanel {
                 
          }
          }
-        if(selecterdRow>=0 && networkJComboBox1.getSelectedIndex()>0 && enterprisecombo.getSelectedIndex()>0){
+        if(selecterdRow>=0){
             
             DoctorOrganRequest req1 = (DoctorOrganRequest)organRequestJtable.getValueAt(selecterdRow, 0);
             
-            if(req1.getStatus() == "sendToAdmin"){
+            if(req1.getStatus().equals("sendToAdmin")){
                
             req1.setStatus("sendToOPO");
            

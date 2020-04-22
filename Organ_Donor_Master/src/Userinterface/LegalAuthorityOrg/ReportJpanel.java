@@ -303,7 +303,7 @@ public class ReportJpanel extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
         String res = responseCombo.getSelectedItem().toString();
-        if(res.equals("Decline") ){
+        if(res == "Decline"){
           for(Patient p : organization.getPatientdirectory().getPatientdirectory()){
               if(request.getPatient_email().equals(p.getEmailid())){
                   p.setFlag("eligible");

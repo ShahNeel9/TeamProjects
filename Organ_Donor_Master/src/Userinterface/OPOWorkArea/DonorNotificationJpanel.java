@@ -250,7 +250,7 @@ public class DonorNotificationJpanel extends javax.swing.JPanel {
             }
         if(selectedrow>=0){
             
-            DoctorOrganRequest request = (DoctorOrganRequest)opodoctorJtable.getValueAt(selectedrow,1);
+            DoctorOrganRequest request = (DoctorOrganRequest)opodoctorJtable.getValueAt(selectedrow,0);
             
             if(request.getStatus().equals("completed")){
                 

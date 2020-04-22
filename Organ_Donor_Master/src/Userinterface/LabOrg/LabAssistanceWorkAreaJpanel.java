@@ -299,7 +299,7 @@ public class LabAssistanceWorkAreaJpanel extends javax.swing.JPanel {
         if(selectedrow>=0){
             
             DoctorOrganRequest request = (DoctorOrganRequest)LabJtable.getValueAt(selectedrow, 0);
-            if(request.getStatus() == "sendToOPO"){
+            if(request.getStatus().equals("sendToLab")){
             request.setReceiver(account);
             account.getWorkqueue().getWorkrequestList().add(request);
             mypopulateTable();
