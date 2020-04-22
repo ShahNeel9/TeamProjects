@@ -18,10 +18,12 @@ public class Employee {
     public Employee() {
         id = count;
         count++;
+        
     }
 
     public int getId() {
         return id;
+        
     }
 
     public void setName(String name) {
