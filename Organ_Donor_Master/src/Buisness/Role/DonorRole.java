@@ -17,6 +17,7 @@ import javax.swing.JPanel;
  * @author patel
  */
 public class DonorRole extends Role{
+    
 
     @Override
     public JPanel createWorkArea(JPanel container, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem system) {
