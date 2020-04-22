@@ -238,7 +238,7 @@ public class ReportJpanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 560, 170, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 530, 170, -1));
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI", 1, 16)); // NOI18N
         jLabel3.setText("Response");

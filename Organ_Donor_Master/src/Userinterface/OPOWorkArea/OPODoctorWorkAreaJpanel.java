@@ -116,8 +116,8 @@ public class OPODoctorWorkAreaJpanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(opodoctorJtable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 260, 960, 138));
-        add(txtstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 442, 216, -1));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 960, 138));
+        add(txtstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 380, 216, -1));
 
         btnstatus.setText("Process Organ Request");
         btnstatus.addActionListener(new java.awt.event.ActionListener() {
@@ -125,7 +125,7 @@ public class OPODoctorWorkAreaJpanel extends javax.swing.JPanel {
                 btnstatusActionPerformed(evt);
             }
         });
-        add(btnstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(302, 441, -1, -1));
+        add(btnstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 380, -1, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/organ-donation-logo.jpg"))); // NOI18N
         jLabel8.setText("jLabel2");
