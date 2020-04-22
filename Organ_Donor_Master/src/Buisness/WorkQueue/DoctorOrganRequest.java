@@ -19,8 +19,6 @@ public class DoctorOrganRequest extends workRequest{
     private Patient patient;
     private Donor donor;
     private UserAccount doctorname;
-   
-   
   
 
     public Patient getPatient() {

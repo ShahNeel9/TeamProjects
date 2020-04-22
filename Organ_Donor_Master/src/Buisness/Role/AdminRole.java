@@ -12,6 +12,7 @@ import Buisness.UserAccount.UserAccount;
 import Userinterface.AdminWorkArea.AdminWorkAreaJpanel;
 import javax.swing.JPanel;
 
+
 /**
  *
  * @author patel
@@ -21,6 +22,8 @@ public class AdminRole extends Role{
     @Override
     public JPanel createWorkArea(JPanel container, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem system) {
         return new AdminWorkAreaJpanel(container, enterprise,account);
+        
+        
     }
     
 }
