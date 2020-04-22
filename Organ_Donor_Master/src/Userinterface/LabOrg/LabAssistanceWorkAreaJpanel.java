@@ -63,7 +63,7 @@ public class LabAssistanceWorkAreaJpanel extends javax.swing.JPanel {
                    Object[] row = new Object[5];
                    row[0] = req;
                    row[1] = request.getRequest();
-                   row[2] = req.getDonor();
+                   row[2] = req.getDonor() == null ? null : req.getDonor().getName();
                    row[3] = request.getResponse();
                    row[4] = request.getStatus();
                     model.addRow(row);
@@ -84,7 +84,7 @@ public class LabAssistanceWorkAreaJpanel extends javax.swing.JPanel {
                    row[1] = req;
                    row[2] = request.getRequest();
                    row[3] = request.getResponse();
-                   row[4] = req.getDonor();
+                   row[4] = req.getDonor() == null ? null : req.getDonor().getName();
                    row[5] = request.getStatus();
                     model.addRow(row);
        }

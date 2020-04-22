@@ -47,6 +47,7 @@ public class DoctorWorkAreaJpanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1000, 700));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnManagepatient.setText("Manage Patient Details");
         btnManagepatient.addActionListener(new java.awt.event.ActionListener() {
@@ -54,6 +55,7 @@ public class DoctorWorkAreaJpanel extends javax.swing.JPanel {
                 btnManagepatientActionPerformed(evt);
             }
         });
+        add(btnManagepatient, new org.netbeans.lib.awtextra.AbsoluteConstraints(407, 270, 209, -1));
 
         btnCreaterequest.setText("Create request for Organ");
         btnCreaterequest.addActionListener(new java.awt.event.ActionListener() {
@@ -61,6 +63,7 @@ public class DoctorWorkAreaJpanel extends javax.swing.JPanel {
                 btnCreaterequestActionPerformed(evt);
             }
         });
+        add(btnCreaterequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(407, 331, 240, -1));
 
         btnCheck.setText("Check Organ Delivery");
         btnCheck.addActionListener(new java.awt.event.ActionListener() {
@@ -68,9 +71,11 @@ public class DoctorWorkAreaJpanel extends javax.swing.JPanel {
                 btnCheckActionPerformed(evt);
             }
         });
+        add(btnCheck, new org.netbeans.lib.awtextra.AbsoluteConstraints(407, 394, 209, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/organ-donation-logo.jpg"))); // NOI18N
         jLabel8.setText("jLabel2");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 90));
 
         jPanel2.setBackground(new java.awt.Color(15, 58, 59));
         jPanel2.setPreferredSize(new java.awt.Dimension(1000, 72));
@@ -102,36 +107,7 @@ public class DoctorWorkAreaJpanel extends javax.swing.JPanel {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(407, 407, 407)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnCreaterequest)
-                            .addComponent(btnManagepatient, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnCheck, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(99, 99, 99)
-                .addComponent(btnManagepatient)
-                .addGap(32, 32, 32)
-                .addComponent(btnCreaterequest)
-                .addGap(34, 34, 34)
-                .addComponent(btnCheck)
-                .addContainerGap(277, Short.MAX_VALUE))
-        );
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 91, -1, 80));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManagepatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManagepatientActionPerformed
