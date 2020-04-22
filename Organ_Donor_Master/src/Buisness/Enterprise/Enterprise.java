@@ -24,6 +24,7 @@ public class Enterprise extends Organization{
         this.enterprisetype = enterprisetype;
         this.organizationdirectory = new OrganizationDirectory();
     }
+    
 
     @Override
     public ArrayList<Role> getSupportedRole() {
