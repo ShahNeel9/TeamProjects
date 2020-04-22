@@ -105,20 +105,20 @@ public class FindMatchJpanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(donorJtable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 748, 191));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 748, 191));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI", 1, 16)); // NOI18N
         jLabel1.setText("Lab Test Result :");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, -1, -1));
 
         resultJlable.setFont(new java.awt.Font("Yu Gothic UI", 1, 16)); // NOI18N
         resultJlable.setText("<value>");
-        add(resultJlable, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, 317, -1));
+        add(resultJlable, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 317, -1));
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI", 1, 16)); // NOI18N
         jLabel2.setText("Response");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 460, -1, -1));
-        add(txtResponse, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 460, 256, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 400, -1, -1));
+        add(txtResponse, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 400, 256, -1));
 
         btnResponse.setText("send Report");
         btnResponse.addActionListener(new java.awt.event.ActionListener() {
@@ -126,7 +126,7 @@ public class FindMatchJpanel extends javax.swing.JPanel {
                 btnResponseActionPerformed(evt);
             }
         });
-        add(btnResponse, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 460, 180, -1));
+        add(btnResponse, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 400, 180, -1));
 
         btnBack.setText("<<Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {

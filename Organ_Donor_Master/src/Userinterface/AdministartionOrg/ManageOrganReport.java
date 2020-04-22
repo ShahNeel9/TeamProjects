@@ -150,7 +150,7 @@ public class ManageOrganReport extends javax.swing.JPanel {
                 btnAssignActionPerformed(evt);
             }
         });
-        add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 188, -1));
+        add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 188, -1));
 
         reportJtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -173,7 +173,7 @@ public class ManageOrganReport extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(reportJtable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 833, 164));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 360, 833, 164));
 
         btnApprove.setText("Send For Approval");
         btnApprove.addActionListener(new java.awt.event.ActionListener() {
@@ -181,8 +181,8 @@ public class ManageOrganReport extends javax.swing.JPanel {
                 btnApproveActionPerformed(evt);
             }
         });
-        add(btnApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 560, 195, -1));
-        add(txtApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 560, 234, -1));
+        add(btnApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 540, 195, -1));
+        add(txtApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 540, 234, -1));
 
         jPanel1.setBackground(new java.awt.Color(15, 58, 59));
         jPanel1.setPreferredSize(new java.awt.Dimension(1000, 40));
@@ -244,7 +244,7 @@ public class ManageOrganReport extends javax.swing.JPanel {
             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 400, 40));
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 400, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

@@ -153,7 +153,7 @@ public class ManageOrganTransplant extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(transplantJtable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 494, 838, 161));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 838, 161));
 
         txtrequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,7 +191,7 @@ public class ManageOrganTransplant extends javax.swing.JPanel {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 426, 400, -1));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 400, -1));
 
         jButton1.setText("<<Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

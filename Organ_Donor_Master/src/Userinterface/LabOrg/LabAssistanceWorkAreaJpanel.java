@@ -133,7 +133,7 @@ public class LabAssistanceWorkAreaJpanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(LabJtable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 141, 830, 120));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 830, 120));
 
         btnFind.setText("Find Perfect Donor");
         btnFind.addActionListener(new java.awt.event.ActionListener() {
@@ -141,7 +141,7 @@ public class LabAssistanceWorkAreaJpanel extends javax.swing.JPanel {
                 btnFindActionPerformed(evt);
             }
         });
-        add(btnFind, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 600, 244, -1));
+        add(btnFind, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 244, -1));
 
         myJtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -164,7 +164,7 @@ public class LabAssistanceWorkAreaJpanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(myJtable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 830, 182));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, 830, 182));
 
         btnAssign.setText("Assign To Me");
         btnAssign.addActionListener(new java.awt.event.ActionListener() {
@@ -172,7 +172,7 @@ public class LabAssistanceWorkAreaJpanel extends javax.swing.JPanel {
                 btnAssignActionPerformed(evt);
             }
         });
-        add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 288, -1, -1));
+        add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, -1, -1));
 
         jPanel3.setBackground(new java.awt.Color(15, 58, 59));
         jPanel3.setPreferredSize(new java.awt.Dimension(1000, 40));
@@ -249,7 +249,7 @@ public class LabAssistanceWorkAreaJpanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 396, -1));
+        add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 396, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnFindActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFindActionPerformed

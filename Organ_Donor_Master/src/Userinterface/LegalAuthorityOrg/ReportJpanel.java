@@ -268,7 +268,7 @@ public class ReportJpanel extends javax.swing.JPanel {
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Adding Reports");
+        jLabel6.setText(" Report");
 
         jLabel14.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Icons\\icons8-parse_resume.png")); // NOI18N
 

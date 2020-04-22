@@ -94,8 +94,8 @@ public class CheckOrganDelivery extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(informJtable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 147, 690, 192));
-        add(txtRes, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 358, 194, -1));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 690, 192));
+        add(txtRes, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, 194, -1));
 
         jButton1.setText("Complete");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -103,7 +103,7 @@ public class CheckOrganDelivery extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(302, 357, 135, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, 135, -1));
 
         jPanel4.setBackground(new java.awt.Color(15, 58, 59));
         jPanel4.setPreferredSize(new java.awt.Dimension(1000, 40));

@@ -68,7 +68,7 @@ public class AdminWorkAreaJpanel extends javax.swing.JPanel {
                 btnOrgActionPerformed(evt);
             }
         });
-        add(btnOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(361, 319, 220, 40));
+        add(btnOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, 220, 40));
 
         btnEmp.setText("Manage Employee");
         btnEmp.addActionListener(new java.awt.event.ActionListener() {
@@ -76,7 +76,7 @@ public class AdminWorkAreaJpanel extends javax.swing.JPanel {
                 btnEmpActionPerformed(evt);
             }
         });
-        add(btnEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(361, 389, 220, 40));
+        add(btnEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, 220, 40));
 
         btnUser.setBackground(new java.awt.Color(255, 255, 255));
         btnUser.setText("Manage User");
@@ -85,7 +85,7 @@ public class AdminWorkAreaJpanel extends javax.swing.JPanel {
                 btnUserActionPerformed(evt);
             }
         });
-        add(btnUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(361, 459, 220, 40));
+        add(btnUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, 220, 40));
 
         jPanel1.setBackground(new java.awt.Color(15, 58, 59));
         jPanel1.setPreferredSize(new java.awt.Dimension(1000, 70));

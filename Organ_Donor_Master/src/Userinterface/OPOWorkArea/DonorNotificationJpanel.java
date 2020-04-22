@@ -163,7 +163,7 @@ public class DonorNotificationJpanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(DonorJtable);
 
-        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 970, 163));
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 970, 163));
 
         btnInform.setText("Notify Donor");
         btnInform.addActionListener(new java.awt.event.ActionListener() {
@@ -171,8 +171,8 @@ public class DonorNotificationJpanel extends javax.swing.JPanel {
                 btnInformActionPerformed(evt);
             }
         });
-        add(btnInform, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 173, -1));
-        add(txtInform, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, 278, -1));
+        add(btnInform, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 350, 173, -1));
+        add(txtInform, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, 278, -1));
 
         opodoctorJtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -195,7 +195,7 @@ public class DonorNotificationJpanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(opodoctorJtable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 217, 970, 138));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 970, 138));
 
         jPanel2.setBackground(new java.awt.Color(15, 58, 59));
         jPanel2.setPreferredSize(new java.awt.Dimension(1200, 72));

@@ -156,7 +156,7 @@ public class ManageOrganRequestJpanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(organRequestJtable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 680, 127));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 680, 127));
 
         jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -172,7 +172,7 @@ public class ManageOrganRequestJpanel extends javax.swing.JPanel {
                 btnRequestActionPerformed(evt);
             }
         });
-        add(btnRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 380, 247, -1));
+        add(btnRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 247, -1));
 
         jLabel2.setText("Enterprise");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, 106, -1));
@@ -194,8 +194,6 @@ public class ManageOrganRequestJpanel extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText(" Organ Request");
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\New folder\\TeamProjects\\Organ_Donor_Master\\src\\Icons\\icons8-medical_heart.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

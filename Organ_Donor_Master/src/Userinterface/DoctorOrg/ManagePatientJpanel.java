@@ -94,7 +94,7 @@ public class ManagePatientJpanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(patientJtable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 222, 866, 215));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 866, 215));
 
         btnDelete.setText("Delete Patient Detail");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -102,7 +102,7 @@ public class ManagePatientJpanel extends javax.swing.JPanel {
                 btnDeleteActionPerformed(evt);
             }
         });
-        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(756, 471, -1, -1));
+        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 410, -1, -1));
 
         btnView.setText("View Patient Detail");
         btnView.addActionListener(new java.awt.event.ActionListener() {
@@ -110,7 +110,7 @@ public class ManagePatientJpanel extends javax.swing.JPanel {
                 btnViewActionPerformed(evt);
             }
         });
-        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(404, 471, 186, -1));
+        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, 186, -1));
 
         btnAdd.setText("Add Patient Detail");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -118,7 +118,7 @@ public class ManagePatientJpanel extends javax.swing.JPanel {
                 btnAddActionPerformed(evt);
             }
         });
-        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 471, 194, -1));
+        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, 194, -1));
 
         btnBack.setText("<<Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
