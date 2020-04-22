@@ -7,6 +7,7 @@ package Buisness.WorkQueue;
 
 import Buisness.UserAccount.UserAccount;
 
+
 /**
  *
  * @author patel
@@ -57,5 +58,5 @@ public class InformDoctor extends workRequest{
         return this.organ;
     }
    
-    
+ 
 }
