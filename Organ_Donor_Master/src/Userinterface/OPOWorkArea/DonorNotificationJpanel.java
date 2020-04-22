@@ -15,6 +15,7 @@ import Buisness.WorkQueue.DoctorOrganRequest;
 import Buisness.WorkQueue.opoDoctorToDonorRequest;
 import Buisness.WorkQueue.opoDoctorToLabRequest;
 import Buisness.WorkQueue.workRequest;
+import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -137,6 +138,7 @@ public class DonorNotificationJpanel extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1000, 700));
@@ -234,6 +236,14 @@ public class DonorNotificationJpanel extends javax.swing.JPanel {
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/organ-donation-logo.jpg"))); // NOI18N
         jLabel8.setText("jLabel2");
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 90));
+
+        jButton1.setText("<<Back");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnInformActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInformActionPerformed
@@ -327,10 +337,17 @@ public class DonorNotificationJpanel extends javax.swing.JPanel {
 //        
     }//GEN-LAST:event_btnInformActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        container.remove(this);
+        CardLayout layout = (CardLayout) container.getLayout();
+        layout.previous(container);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable DonorJtable;
     private javax.swing.JButton btnInform;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

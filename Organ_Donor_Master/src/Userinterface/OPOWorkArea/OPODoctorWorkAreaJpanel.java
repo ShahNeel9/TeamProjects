@@ -15,6 +15,7 @@ import Buisness.WorkQueue.DoctorOrganRequest;
 import Buisness.WorkQueue.opoDoctorToDonorRequest;
 import Buisness.WorkQueue.opoDoctorToLabRequest;
 import Buisness.WorkQueue.workRequest;
+import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -91,6 +92,7 @@ public class OPODoctorWorkAreaJpanel extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -117,7 +119,7 @@ public class OPODoctorWorkAreaJpanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(opodoctorJtable);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 960, 138));
-        add(txtstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 380, 216, -1));
+        add(txtstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, 216, -1));
 
         btnstatus.setText("Process Organ Request");
         btnstatus.addActionListener(new java.awt.event.ActionListener() {
@@ -125,7 +127,7 @@ public class OPODoctorWorkAreaJpanel extends javax.swing.JPanel {
                 btnstatusActionPerformed(evt);
             }
         });
-        add(btnstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 380, -1, -1));
+        add(btnstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 380, -1, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/organ-donation-logo.jpg"))); // NOI18N
         jLabel8.setText("jLabel2");
@@ -165,6 +167,14 @@ public class OPODoctorWorkAreaJpanel extends javax.swing.JPanel {
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Image\\images (1).jpg")); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 470, -1, -1));
+
+        jButton1.setText("Back");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 100, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnstatusActionPerformed
@@ -211,9 +221,16 @@ public class OPODoctorWorkAreaJpanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_btnstatusActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        container.remove(this);
+        CardLayout layout = (CardLayout) container.getLayout();
+        layout.previous(container);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnstatus;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel8;

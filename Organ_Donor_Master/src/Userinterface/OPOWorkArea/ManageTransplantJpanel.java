@@ -88,6 +88,7 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1000, 700));
@@ -114,7 +115,7 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(transplantJtable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 967, 161));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 967, 161));
 
         btnAss.setText("Assign To Me");
         btnAss.addActionListener(new java.awt.event.ActionListener() {
@@ -122,8 +123,8 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
                 btnAssActionPerformed(evt);
             }
         });
-        add(btnAss, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 430, -1, -1));
-        add(txtRes, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, 190, -1));
+        add(btnAss, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, -1, -1));
+        add(txtRes, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 370, 190, -1));
 
         jButton1.setText("process");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -131,7 +132,7 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 490, 142, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 142, -1));
 
         btnsend.setText("Send For Delivery");
         btnsend.addActionListener(new java.awt.event.ActionListener() {
@@ -139,7 +140,7 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
                 btnsendActionPerformed(evt);
             }
         });
-        add(btnsend, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 490, 166, -1));
+        add(btnsend, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 430, 166, -1));
 
         btnCheck.setText("Check Progress");
         btnCheck.addActionListener(new java.awt.event.ActionListener() {
@@ -147,7 +148,7 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
                 btnCheckActionPerformed(evt);
             }
         });
-        add(btnCheck, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 490, 169, -1));
+        add(btnCheck, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 430, 169, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/organ-donation-logo.jpg"))); // NOI18N
         jLabel8.setText("jLabel2");
@@ -188,7 +189,15 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
         add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1110, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\patel\\Desktop\\git clone\\TeamProjects\\Organ_Donor_Master\\src\\Image\\images (1).jpg")); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 470, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 420, -1, -1));
+
+        jButton2.setText("Back");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 110, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAssActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssActionPerformed
@@ -314,12 +323,19 @@ public class ManageTransplantJpanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_btnCheckActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        container.remove(this);
+        CardLayout layout = (CardLayout) container.getLayout();
+        layout.previous(container);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAss;
     private javax.swing.JButton btnCheck;
     private javax.swing.JButton btnsend;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel8;
